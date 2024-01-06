@@ -10,8 +10,10 @@ export default {
   },
 } satisfies Meta;
 
-export const Basic: StoryFn = () => {
-  return <TourModal open={true} />;
+export const Basic: StoryFn = ({
+  reflame: { rootRef } = { rootRef: undefined },
+} = {}) => {
+  return <TourModal ref={rootRef} open={true} />;
 };
 Basic.args = {
   logoSrc: '/imgs/affine-text-logo.png',

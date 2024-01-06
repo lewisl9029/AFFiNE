@@ -202,7 +202,7 @@ const config = {
       'error',
       {
         case: 'kebabCase',
-        ignore: ['^\\[[a-zA-Z0-9-_]+\\]\\.tsx$'],
+        ignore: ['^\\[[a-zA-Z0-9-_]+\\]\\.tsx$', 'testConfig.tsx$'],
       },
     ],
     'unicorn/no-unnecessary-await': 'error',

@@ -373,6 +373,15 @@ export type GetUserQuery = {
   } | null;
 };
 
+export type GetWorkspaceFeaturesQueryVariables = Exact<{
+  workspaceId: Scalars['String']['input'];
+}>;
+
+export type GetWorkspaceFeaturesQuery = {
+  __typename?: 'Query';
+  workspace: { __typename?: 'WorkspaceType'; features: Array<FeatureType> };
+};
+
 export type GetWorkspacePublicByIdQueryVariables = Exact<{
   id: Scalars['String']['input'];
 }>;
@@ -396,15 +405,6 @@ export type GetWorkspacePublicPagesQuery = {
       mode: PublicPageMode;
     }>;
   };
-};
-
-export type GetWorkspaceFeaturesQueryVariables = Exact<{
-  workspaceId: Scalars['String']['input'];
-}>;
-
-export type GetWorkspaceFeaturesQuery = {
-  __typename?: 'Query';
-  workspace: { __typename?: 'WorkspaceType'; features: Array<FeatureType> };
 };
 
 export type GetWorkspaceQueryVariables = Exact<{
@@ -858,6 +858,11 @@ export type Queries =
       response: GetUserQuery;
     }
   | {
+      name: 'getWorkspaceFeaturesQuery';
+      variables: GetWorkspaceFeaturesQueryVariables;
+      response: GetWorkspaceFeaturesQuery;
+    }
+  | {
       name: 'getWorkspacePublicByIdQuery';
       variables: GetWorkspacePublicByIdQueryVariables;
       response: GetWorkspacePublicByIdQuery;
@@ -866,11 +871,6 @@ export type Queries =
       name: 'getWorkspacePublicPagesQuery';
       variables: GetWorkspacePublicPagesQueryVariables;
       response: GetWorkspacePublicPagesQuery;
-    }
-  | {
-      name: 'getWorkspaceFeaturesQuery';
-      variables: GetWorkspaceFeaturesQueryVariables;
-      response: GetWorkspaceFeaturesQuery;
     }
   | {
       name: 'getWorkspaceQuery';
