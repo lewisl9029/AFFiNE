@@ -10,7 +10,6 @@ export const run = async ({
   rootDirectoryStorybook,
   rootDirectoryFrontendCore,
   rootDirectoryFrontendComponent,
-  rootDirectoryPluginImagePreview,
 }) => {
   const args = process.argv.slice(2);
   const watch = args.includes('--watch') || args.includes('-w');
@@ -24,10 +23,6 @@ export const run = async ({
     rootDirectoryFrontendComponent,
     './src'
   );
-  const workingDirectoryPluginImagePreview = path_.join(
-    rootDirectoryPluginImagePreview,
-    './src'
-  );
   const outputDirectory = path_.join(workingDirectoryStorybook, '__generated/');
   const outputDirectoryFrontendCore = path_.join(
     workingDirectoryFrontendCore,
@@ -35,10 +30,6 @@ export const run = async ({
   );
   const outputDirectoryFrontendComponent = path_.join(
     workingDirectoryFrontendComponent,
-    '__generated/'
-  );
-  const outputDirectoryPluginImagePreview = path_.join(
-    workingDirectoryPluginImagePreview,
     '__generated/'
   );
 
@@ -51,9 +42,6 @@ export const run = async ({
   );
   const packageJsonFrontendComponent = JSON.parse(
     fs.readFileSync(path_.join(rootDirectoryFrontendComponent, 'package.json'))
-  );
-  const packageJsonPluginImagePreview = JSON.parse(
-    fs.readFileSync(path_.join(rootDirectoryPluginImagePreview, 'package.json'))
   );
 
   const ignorePlugin = {
@@ -158,23 +146,6 @@ export const run = async ({
               });
               return fs.promises.writeFile(outputPath, contents);
             }),
-          ...result.outputFiles
-            .filter(
-              ({ path }) =>
-                path.startsWith(workingDirectoryPluginImagePreview) &&
-                path.endsWith('.css.js')
-            )
-            .map(async ({ path, contents }) => {
-              const outputPath = path_.join(
-                outputDirectoryPluginImagePreview,
-                've',
-                path_.relative(workingDirectoryPluginImagePreview, path)
-              );
-              await fs.promises.mkdir(path_.dirname(outputPath), {
-                recursive: true,
-              });
-              return fs.promises.writeFile(outputPath, contents);
-            }),
         ]);
         console.log(new Date(), 'built css bundles');
       });
@@ -191,7 +162,6 @@ export const run = async ({
       '__virtualEntryPoint',
       path_.join(workingDirectoryFrontendCore, './**/**.css.ts'),
       path_.join(workingDirectoryFrontendComponent, './**/**.css.ts'),
-      path_.join(workingDirectoryPluginImagePreview, './**/**.css.ts'),
     ],
     sourcemap: false,
     bundle: true,
@@ -238,7 +208,6 @@ export const run = async ({
             ...packageJsonStorybook.dependencies,
             ...packageJsonFrontendCore.dependencies,
             ...packageJsonFrontendComponent.dependencies,
-            ...packageJsonPluginImagePreview.dependencies,
           })
             .filter(pkg => !pkg.startsWith('@affine/'))
             .forEach(pkg => {
@@ -273,8 +242,6 @@ export const run = async ({
         ...packageJsonFrontendCore.devDependencies,
         ...packageJsonFrontendComponent.dependencies,
         ...packageJsonFrontendComponent.devDependencies,
-        ...packageJsonPluginImagePreview.dependencies,
-        ...packageJsonPluginImagePreview.devDependencies,
       })
         .filter(pkg => !pkg.startsWith('@affine/'))
         .flatMap(pkg => [pkg, `${pkg}/*`]),

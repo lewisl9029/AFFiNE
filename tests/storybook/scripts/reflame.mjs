@@ -19,9 +19,5 @@ await Promise.all([
       rootDirectory,
       'packages/frontend/component'
     ),
-    rootDirectoryPluginImagePreview: path.join(
-      rootDirectory,
-      'packages/plugins/image-preview'
-    ),
   }),
 ]);
