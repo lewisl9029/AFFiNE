@@ -32,6 +32,6 @@ window.runtimeConfig = {
     enable_bultin_ledits: false,
   },
   appVersion: '0.11.0',
-  editorVersion: '0.11.0-nightly-202401020419-752a5b8',
+  editorVersion: '0.12.0-nightly-202401120404-4219e86',
   appBuildType: 'canary',
 };
