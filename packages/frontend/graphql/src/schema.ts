@@ -36,6 +36,7 @@ export interface Scalars {
 export enum FeatureType {
   Copilot = 'Copilot',
   EarlyAccess = 'EarlyAccess',
+  UnlimitedWorkspace = 'UnlimitedWorkspace',
 }
 
 export enum InvoiceStatus {
@@ -378,15 +379,6 @@ export type GetUserQuery = {
         hasPassword: boolean | null;
       }
     | null;
-};
-
-export type GetWorkspaceFeaturesQueryVariables = Exact<{
-  workspaceId: Scalars['String']['input'];
-}>;
-
-export type GetWorkspaceFeaturesQuery = {
-  __typename?: 'Query';
-  workspace: { __typename?: 'WorkspaceType'; features: Array<FeatureType> };
 };
 
 export type GetWorkspaceFeaturesQueryVariables = Exact<{

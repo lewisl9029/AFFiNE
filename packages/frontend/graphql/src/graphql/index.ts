@@ -374,19 +374,6 @@ query getWorkspaceFeatures($workspaceId: String!) {
 }`,
 };
 
-export const getWorkspaceFeaturesQuery = {
-  id: 'getWorkspaceFeaturesQuery' as const,
-  operationName: 'getWorkspaceFeatures',
-  definitionName: 'workspace',
-  containsFile: false,
-  query: `
-query getWorkspaceFeatures($workspaceId: String!) {
-  workspace(id: $workspaceId) {
-    features
-  }
-}`,
-};
-
 export const getWorkspacePublicByIdQuery = {
   id: 'getWorkspacePublicByIdQuery' as const,
   operationName: 'getWorkspacePublicById',
