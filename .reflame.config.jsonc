@@ -127,13 +127,6 @@
         "packageJson": true
       }
     },
-    "@affine/cmdk": {
-      "sourceDirectory": "packages/common/cmdk/src",
-      "exports": "./index.tsx",
-      "nodejsCompatibility": {
-        "packageJson": true
-      }
-    },
     "@affine/debug": {
       "sourceDirectory": "packages/common/debug/src",
       "exports": "./index.ts",
