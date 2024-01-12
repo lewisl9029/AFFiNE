@@ -9,13 +9,12 @@ import {
 } from '@nestjs/common';
 import type { Response } from 'express';
 
-import { CallTimer } from '../../metrics';
-import { PrismaService } from '../../prisma';
-import { DocID } from '../../utils/doc';
+import { CallTimer, PrismaService } from '../../fundamentals';
 import { Auth, CurrentUser, Publicable } from '../auth';
 import { DocHistoryManager, DocManager } from '../doc';
 import { WorkspaceBlobStorage } from '../storage';
 import { UserType } from '../users';
+import { DocID } from '../utils/doc';
 import { PermissionService, PublicPageMode } from './permission';
 import { Permission } from './types';
 
@@ -53,7 +52,6 @@ export class WorkspacesController {
       res.setHeader('content-type', metadata.contentType);
       res.setHeader('last-modified', metadata.lastModified.toISOString());
       res.setHeader('content-length', metadata.contentLength);
-      res.setHeader('x-checksum-crc32', metadata.checksumCRC32);
     } else {
       this.logger.warn(`Blob ${workspaceId}/${name} has no metadata`);
     }

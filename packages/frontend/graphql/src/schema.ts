@@ -363,14 +363,30 @@ export type GetUserQueryVariables = Exact<{
 
 export type GetUserQuery = {
   __typename?: 'Query';
-  user: {
-    __typename?: 'UserType';
-    id: string;
-    name: string;
-    avatarUrl: string | null;
-    email: string;
-    hasPassword: boolean | null;
-  } | null;
+  user:
+    | {
+        __typename: 'LimitedUserType';
+        email: string;
+        hasPassword: boolean | null;
+      }
+    | {
+        __typename: 'UserType';
+        id: string;
+        name: string;
+        avatarUrl: string | null;
+        email: string;
+        hasPassword: boolean | null;
+      }
+    | null;
+};
+
+export type GetWorkspaceFeaturesQueryVariables = Exact<{
+  workspaceId: Scalars['String']['input'];
+}>;
+
+export type GetWorkspaceFeaturesQuery = {
+  __typename?: 'Query';
+  workspace: { __typename?: 'WorkspaceType'; features: Array<FeatureType> };
 };
 
 export type GetWorkspaceFeaturesQueryVariables = Exact<{
@@ -739,6 +755,29 @@ export type UploadAvatarMutation = {
   };
 };
 
+export type AvailableFeaturesQueryVariables = Exact<{
+  id: Scalars['String']['input'];
+}>;
+
+export type AvailableFeaturesQuery = {
+  __typename?: 'Query';
+  workspace: {
+    __typename?: 'WorkspaceType';
+    availableFeatures: Array<FeatureType>;
+  };
+};
+
+export type SetWorkspaceExperimentalFeatureMutationVariables = Exact<{
+  workspaceId: Scalars['String']['input'];
+  feature: FeatureType;
+  enable: Scalars['Boolean']['input'];
+}>;
+
+export type SetWorkspaceExperimentalFeatureMutation = {
+  __typename?: 'Mutation';
+  setWorkspaceExperimentalFeature: boolean;
+};
+
 export type AddWorkspaceFeatureMutationVariables = Exact<{
   workspaceId: Scalars['String']['input'];
   feature: FeatureType;
@@ -918,6 +957,11 @@ export type Queries =
       response: SubscriptionQuery;
     }
   | {
+      name: 'availableFeaturesQuery';
+      variables: AvailableFeaturesQueryVariables;
+      response: AvailableFeaturesQuery;
+    }
+  | {
       name: 'listWorkspaceFeaturesQuery';
       variables: ListWorkspaceFeaturesQueryVariables;
       response: ListWorkspaceFeaturesQuery;
@@ -1063,6 +1107,11 @@ export type Mutations =
       name: 'uploadAvatarMutation';
       variables: UploadAvatarMutationVariables;
       response: UploadAvatarMutation;
+    }
+  | {
+      name: 'setWorkspaceExperimentalFeatureMutation';
+      variables: SetWorkspaceExperimentalFeatureMutationVariables;
+      response: SetWorkspaceExperimentalFeatureMutation;
     }
   | {
       name: 'addWorkspaceFeatureMutation';

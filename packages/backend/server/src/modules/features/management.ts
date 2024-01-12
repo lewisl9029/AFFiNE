@@ -1,7 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 
-import { Config } from '../../config';
-import { PrismaService } from '../../prisma';
+import { Config, PrismaService } from '../../fundamentals';
 import { FeatureService } from './service';
 import { FeatureType } from './types';
 
@@ -92,7 +91,7 @@ export class FeatureManagementService {
 
   async getWorkspaceFeatures(workspaceId: string) {
     const features = await this.feature.getWorkspaceFeatures(workspaceId);
-    return features.map(feature => feature.feature.name);
+    return features.filter(f => f.activated).map(f => f.feature.name);
   }
 
   async hasWorkspaceFeature(workspaceId: string, feature: FeatureType) {

@@ -22,11 +22,14 @@ import { nanoid } from 'nanoid';
 import type { AuthAction, CookieOption, NextAuthOptions } from 'next-auth';
 import { AuthHandler } from 'next-auth/core';
 
-import { Config } from '../../config';
-import { metrics } from '../../metrics';
-import { PrismaService } from '../../prisma/service';
-import { SessionService } from '../../session';
-import { AuthThrottlerGuard, Throttle } from '../../throttler';
+import {
+  AuthThrottlerGuard,
+  Config,
+  metrics,
+  PrismaService,
+  SessionService,
+  Throttle,
+} from '../../fundamentals';
 import { NextAuthOptionsProvide } from './next-auth-options';
 import { AuthService } from './service';
 
@@ -186,15 +189,17 @@ export class NextAuthController {
     }
 
     let nextAuthTokenCookie: (CookieOption & { value: string }) | undefined;
-    const cookiePrefix = this.config.node.prod ? '__Secure-' : '';
-    const sessionCookieName = `${cookiePrefix}next-auth.session-token`;
+    const secureCookiePrefix = '__Secure-';
+    const sessionCookieName = `next-auth.session-token`;
     // next-auth credentials login only support JWT strategy
     // https://next-auth.js.org/configuration/providers/credentials
     // let's store the session token in the database
     if (
       credentialsSignIn &&
       (nextAuthTokenCookie = cookies?.find(
-        ({ name }) => name === sessionCookieName
+        ({ name }) =>
+          name === sessionCookieName ||
+          name === `${secureCookiePrefix}${sessionCookieName}`
       ))
     ) {
       const cookieExpires = new Date();

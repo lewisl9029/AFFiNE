@@ -8,12 +8,14 @@ import Email from 'next-auth/providers/email';
 import Github from 'next-auth/providers/github';
 import Google from 'next-auth/providers/google';
 
-import { Config } from '../../config';
-import { PrismaService } from '../../prisma';
-import { SessionService } from '../../session';
+import {
+  Config,
+  MailService,
+  PrismaService,
+  SessionService,
+} from '../../fundamentals';
 import { FeatureType } from '../features';
 import { Quota_FreePlanV1 } from '../quota';
-import { MailService } from './mailer';
 import {
   decode,
   encode,
@@ -179,7 +181,7 @@ export const NextAuthOptionsProvider: FactoryProvider<NextAuthOptions> = {
       );
     }
 
-    if (config.auth.oauthProviders.google) {
+    if (config.auth.oauthProviders.google?.enabled) {
       nextAuthOptions.providers.push(
         // @ts-expect-error esm interop issue
         Google.default({

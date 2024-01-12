@@ -1,4 +1,5 @@
-import { PrismaService } from '../../prisma';
+import { PrismaClient } from '@prisma/client';
+
 import { Feature, FeatureSchema, FeatureType } from './types';
 
 class FeatureConfig {
@@ -42,9 +43,22 @@ export class EarlyAccessFeatureConfig extends FeatureConfig {
   }
 }
 
+export class UnlimitedWorkspaceFeatureConfig extends FeatureConfig {
+  override config!: Feature & { feature: FeatureType.UnlimitedWorkspace };
+
+  constructor(data: any) {
+    super(data);
+
+    if (this.config.feature !== FeatureType.UnlimitedWorkspace) {
+      throw new Error('Invalid feature config: type is not EarlyAccess');
+    }
+  }
+}
+
 const FeatureConfigMap = {
   [FeatureType.Copilot]: CopilotFeatureConfig,
   [FeatureType.EarlyAccess]: EarlyAccessFeatureConfig,
+  [FeatureType.UnlimitedWorkspace]: UnlimitedWorkspaceFeatureConfig,
 };
 
 export type FeatureConfigType<F extends FeatureType> = InstanceType<
@@ -53,7 +67,7 @@ export type FeatureConfigType<F extends FeatureType> = InstanceType<
 
 const FeatureCache = new Map<number, FeatureConfigType<FeatureType>>();
 
-export async function getFeature(prisma: PrismaService, featureId: number) {
+export async function getFeature(prisma: PrismaClient, featureId: number) {
   const cachedQuota = FeatureCache.get(featureId);
 
   if (cachedQuota) {

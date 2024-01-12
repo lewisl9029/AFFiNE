@@ -1,6 +1,7 @@
 /// <reference types="./global.d.ts" />
-import { start as startAutoMetrics } from './metrics';
-startAutoMetrics();
+// keep the config import at the top
+// eslint-disable-next-line simple-import-sort/imports
+import './prelude';
 
 import { NestFactory } from '@nestjs/core';
 import type { NestExpressApplication } from '@nestjs/platform-express';
@@ -8,20 +9,16 @@ import cookieParser from 'cookie-parser';
 import graphqlUploadExpress from 'graphql-upload/graphqlUploadExpress.mjs';
 
 import { AppModule } from './app';
-import { Config } from './config';
+import { RedisIoAdapter } from './fundamentals';
+import { CacheRedis } from './fundamentals/cache/redis';
 import { ExceptionLogger } from './middleware/exception-logger';
 import { serverTimingAndCache } from './middleware/timing';
-import { RedisIoAdapter } from './modules/sync/redis-adapter';
 
-const { NODE_ENV, AFFINE_ENV } = process.env;
 const app = await NestFactory.create<NestExpressApplication>(AppModule, {
   cors: true,
   rawBody: true,
   bodyParser: true,
-  logger:
-    NODE_ENV !== 'production' || AFFINE_ENV !== 'production'
-      ? ['verbose']
-      : ['log'],
+  logger: AFFiNE.affine.stable ? ['log'] : ['verbose'],
 });
 
 app.use(serverTimingAndCache);
@@ -37,23 +34,16 @@ app.use(
 app.useGlobalFilters(new ExceptionLogger());
 app.use(cookieParser());
 
-const config = app.get(Config);
-
-const host = config.node.prod ? '0.0.0.0' : 'localhost';
-const port = config.port ?? 3010;
-
-if (config.redis.enabled) {
+if (AFFiNE.redis.enabled) {
+  const redis = app.get(CacheRedis, { strict: false });
   const redisIoAdapter = new RedisIoAdapter(app);
-  await redisIoAdapter.connectToRedis(
-    config.redis.host,
-    config.redis.port,
-    config.redis.username,
-    config.redis.password,
-    config.redis.database
-  );
+  await redisIoAdapter.connectToRedis(redis);
   app.useWebSocketAdapter(redisIoAdapter);
 }
 
-await app.listen(port, host);
+await app.listen(AFFiNE.port, AFFiNE.host);
 
-console.log(`Listening on http://${host}:${port}`);
+console.log(
+  `AFFiNE Server has been started on http://${AFFiNE.host}:${AFFiNE.port}.`
+);
+console.log(`And the public server should be recognized as ${AFFiNE.baseUrl}`);

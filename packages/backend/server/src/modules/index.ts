@@ -1,8 +1,10 @@
+import { join } from 'node:path';
+
 import { DynamicModule, Type } from '@nestjs/common';
 import { ScheduleModule } from '@nestjs/schedule';
+import { ServeStaticModule } from '@nestjs/serve-static';
 
-import { SERVER_FLAVOR } from '../config';
-import { GqlModule } from '../graphql.module';
+import { GqlModule } from '../fundamentals/graphql';
 import { ServerConfigModule } from './config';
 import { DocModule } from './doc';
 import { PaymentModule } from './payment';
@@ -15,7 +17,7 @@ import { WorkspaceModule } from './workspaces';
 
 const BusinessModules: (Type | DynamicModule)[] = [];
 
-switch (SERVER_FLAVOR) {
+switch (AFFiNE.flavor) {
   case 'sync':
     BusinessModules.push(SyncModule, DocModule);
     break;
@@ -29,7 +31,10 @@ switch (SERVER_FLAVOR) {
       UsersModule,
       SyncModule,
       DocModule,
-      StorageModule
+      StorageModule,
+      ServeStaticModule.forRoot({
+        rootPath: join('/app', 'static'),
+      })
     );
     break;
   case 'graphql':
@@ -62,4 +67,4 @@ switch (SERVER_FLAVOR) {
     break;
 }
 
-export { BusinessModules, SERVER_FLAVOR };
+export { BusinessModules };

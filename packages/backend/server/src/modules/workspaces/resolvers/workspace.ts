@@ -1,6 +1,6 @@
 import {
   ForbiddenException,
-  InternalServerErrorException,
+  HttpStatus,
   Logger,
   NotFoundException,
   UseGuards,
@@ -16,16 +16,22 @@ import {
 } from '@nestjs/graphql';
 import type { User } from '@prisma/client';
 import { getStreamAsBuffer } from 'get-stream';
+import { GraphQLError } from 'graphql';
 import GraphQLUpload from 'graphql-upload/GraphQLUpload.mjs';
 import { applyUpdate, Doc } from 'yjs';
 
-import { EventEmitter } from '../../../event';
-import { PrismaService } from '../../../prisma';
-import { CloudThrottlerGuard, Throttle } from '../../../throttler';
-import type { FileUpload } from '../../../types';
+import {
+  CloudThrottlerGuard,
+  EventEmitter,
+  type FileUpload,
+  MailService,
+  PrismaService,
+  Throttle,
+} from '../../../fundamentals';
 import { Auth, CurrentUser, Public } from '../../auth';
-import { MailService } from '../../auth/mailer';
 import { AuthService } from '../../auth/service';
+import { FeatureManagementService, FeatureType } from '../../features';
+import { QuotaManagementService } from '../../quota';
 import { WorkspaceBlobStorage } from '../../storage';
 import { UsersService, UserType } from '../../users';
 import { PermissionService } from '../permission';
@@ -54,6 +60,8 @@ export class WorkspaceResolver {
     private readonly mailer: MailService,
     private readonly prisma: PrismaService,
     private readonly permissions: PermissionService,
+    private readonly feature: FeatureManagementService,
+    private readonly quota: QuotaManagementService,
     private readonly users: UsersService,
     private readonly event: EventEmitter,
     private readonly blobStorage: WorkspaceBlobStorage
@@ -321,8 +329,29 @@ export class WorkspaceResolver {
       throw new ForbiddenException('Cannot change owner');
     }
 
-    const target = await this.users.findUserByEmail(email);
+    const unlimited = await this.feature.hasWorkspaceFeature(
+      workspaceId,
+      FeatureType.UnlimitedWorkspace
+    );
+    if (!unlimited) {
+      // member limit check
+      const [memberCount, quota] = await Promise.all([
+        this.prisma.workspaceUserPermission.count({
+          where: { workspaceId },
+        }),
+        this.quota.getUserQuota(user.id),
+      ]);
+      if (memberCount >= quota.memberLimit) {
+        throw new GraphQLError('Workspace member limit reached', {
+          extensions: {
+            status: HttpStatus[HttpStatus.PAYLOAD_TOO_LARGE],
+            code: HttpStatus.PAYLOAD_TOO_LARGE,
+          },
+        });
+      }
+    }
 
+    let target = await this.users.findUserByEmail(email);
     if (target) {
       const originRecord = await this.prisma.workspaceUserPermission.findFirst({
         where: {
@@ -330,94 +359,59 @@ export class WorkspaceResolver {
           userId: target.id,
         },
       });
-
-      if (originRecord) {
-        return originRecord.id;
-      }
-
-      const inviteId = await this.permissions.grant(
-        workspaceId,
-        target.id,
-        permission
-      );
-      if (sendInviteMail) {
-        const inviteInfo = await this.getInviteInfo(inviteId);
-
-        try {
-          await this.mailer.sendInviteEmail(email, inviteId, {
-            workspace: {
-              id: inviteInfo.workspace.id,
-              name: inviteInfo.workspace.name,
-              avatar: inviteInfo.workspace.avatar,
-            },
-            user: {
-              avatar: inviteInfo.user?.avatarUrl || '',
-              name: inviteInfo.user?.name || '',
-            },
-          });
-        } catch (e) {
-          const ret = await this.permissions.revokeWorkspace(
-            workspaceId,
-            target.id
-          );
-
-          if (!ret) {
-            this.logger.fatal(
-              `failed to send ${workspaceId} invite email to ${email} and failed to revoke permission: ${inviteId}, ${e}`
-            );
-          } else {
-            this.logger.warn(
-              `failed to send ${workspaceId} invite email to ${email}, but successfully revoked permission: ${e}`
-            );
-          }
-
-          return new InternalServerErrorException(e);
-        }
-      }
-      return inviteId;
+      // only invite if the user is not already in the workspace
+      if (originRecord) return originRecord.id;
     } else {
-      const user = await this.auth.createAnonymousUser(email);
-      const inviteId = await this.permissions.grant(
-        workspaceId,
-        user.id,
-        permission
-      );
-      if (sendInviteMail) {
-        const inviteInfo = await this.getInviteInfo(inviteId);
-
-        try {
-          await this.mailer.sendInviteEmail(email, inviteId, {
-            workspace: {
-              id: inviteInfo.workspace.id,
-              name: inviteInfo.workspace.name,
-              avatar: inviteInfo.workspace.avatar,
-            },
-            user: {
-              avatar: inviteInfo.user?.avatarUrl || '',
-              name: inviteInfo.user?.name || '',
-            },
-          });
-        } catch (e) {
-          const ret = await this.permissions.revokeWorkspace(
-            workspaceId,
-            user.id
-          );
-
-          if (!ret) {
-            this.logger.fatal(
-              `failed to send ${workspaceId} invite email to ${email} and failed to revoke permission: ${inviteId}, ${e}`
-            );
-          } else {
-            this.logger.warn(
-              `failed to send ${workspaceId} invite email to ${email}, but successfully revoked permission: ${e}`
-            );
-          }
-
-          return new InternalServerErrorException(e);
-        }
-      }
-      return inviteId;
+      target = await this.auth.createAnonymousUser(email);
     }
+
+    const inviteId = await this.permissions.grant(
+      workspaceId,
+      target.id,
+      permission
+    );
+    if (sendInviteMail) {
+      const inviteInfo = await this.getInviteInfo(inviteId);
+
+      try {
+        await this.mailer.sendInviteEmail(email, inviteId, {
+          workspace: {
+            id: inviteInfo.workspace.id,
+            name: inviteInfo.workspace.name,
+            avatar: inviteInfo.workspace.avatar,
+          },
+          user: {
+            avatar: inviteInfo.user?.avatarUrl || '',
+            name: inviteInfo.user?.name || '',
+          },
+        });
+      } catch (e) {
+        const ret = await this.permissions.revokeWorkspace(
+          workspaceId,
+          target.id
+        );
+
+        if (!ret) {
+          this.logger.fatal(
+            `failed to send ${workspaceId} invite email to ${email} and failed to revoke permission: ${inviteId}, ${e}`
+          );
+        } else {
+          this.logger.warn(
+            `failed to send ${workspaceId} invite email to ${email}, but successfully revoked permission: ${e}`
+          );
+        }
+        return new GraphQLError(
+          'failed to send invite email, please try again',
+          {
+            extensions: {
+              status: HttpStatus[HttpStatus.INTERNAL_SERVER_ERROR],
+              code: HttpStatus.INTERNAL_SERVER_ERROR,
+            },
+          }
+        );
+      }
+    }
+    return inviteId;
   }
 
   @Throttle({
