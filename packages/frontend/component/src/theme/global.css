@@ -8,7 +8,7 @@
 }
 
 :root {
-  --noise-background: url(./noise.avif);
+  --noise-background: url(/theme/noise.avif);
 }
 
 html,

@@ -18,3 +18,8 @@
 *.tar.gz binary
 *.zip binary
 *.7z binary
+
+# Auto-collapse generated files in GitHub diffs
+**/**/i18n-generated.ts linguist-generated=true
+**/**/__generated/**/** linguist-generated=true
+

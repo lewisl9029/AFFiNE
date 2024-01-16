@@ -59,7 +59,7 @@ Thumbs.db
 .vercel
 out/
 storybook-static
-i18n-generated.ts
+# i18n-generated.ts
 
 test-results
 playwright-report

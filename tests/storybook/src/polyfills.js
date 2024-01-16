@@ -1,0 +1,37 @@
+window.global = window;
+// Copied from runtimeConfig value in storybook
+window.runtimeConfig = {
+  enablePlugin: true,
+  builtinPlugins: [
+    '/plugins/copilot',
+    '/plugins/hello-world',
+    '/plugins/image-preview',
+    '/plugins/vue-hello-world',
+  ],
+  enableTestProperties: true,
+  enableBroadcastChannelProvider: true,
+  enableDebugPage: true,
+  changelogUrl: 'https://github.com/toeverything/AFFiNE/releases',
+  downloadUrl: 'https://affine.pro/download',
+  imageProxyUrl: 'https://workers.toeverything.workers.dev/proxy/image',
+  enablePreloading: true,
+  enableNewSettingModal: true,
+  enableNewSettingUnstableApi: false,
+  enableSQLiteProvider: true,
+  enableMoveDatabase: false,
+  enableNotificationCenter: true,
+  enableCloud: false,
+  enableCaptcha: false,
+  enableEnhanceShareMode: false,
+  enablePayment: true,
+  enablePageHistory: true,
+  enableCopilot: true,
+  serverUrlPrefix: 'http://localhost:8080',
+  editorFlags: {
+    enable_expand_database_block: false,
+    enable_bultin_ledits: false,
+  },
+  appVersion: '0.11.0',
+  editorVersion: '0.12.0-nightly-202401120404-4219e86',
+  appBuildType: 'canary',
+};

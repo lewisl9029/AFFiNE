@@ -232,6 +232,8 @@ async function createAndInitPage(
   return page;
 }
 
+// Not supported in Reflame yet
+// TODO: can we refactor it to a useEffect or suspense fetch?
 PageListStory.loaders = [
   async () => {
     const schema = new Schema();

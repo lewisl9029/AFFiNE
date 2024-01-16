@@ -56,7 +56,7 @@
     "async-call-rpc": "^6.3.1",
     "bytes": "^3.1.2",
     "clsx": "^2.0.0",
-    "cmdk": "patch:cmdk@npm%3A0.2.0#~/.yarn/patches/cmdk-npm-0.2.0-302237a911.patch",
+    "cmdk": "^0.2.0",
     "css-spring": "^4.1.0",
     "cssnano": "^6.0.1",
     "dayjs": "^1.11.10",
