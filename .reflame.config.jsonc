@@ -242,7 +242,6 @@
   "nodejsCompatibility": {
     "packageJson": true
   },
-  "scriptsTesting": ["/polyfills.js"],
   "storybookCompatibility": {
     "testStories": true,
     "stories": [
