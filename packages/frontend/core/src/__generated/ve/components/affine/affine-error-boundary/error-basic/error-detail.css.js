@@ -1,11 +1,11 @@
-// ../../packages/frontend/core/src/components/affine/affine-error-boundary/error-basic/error-detail.css.ts
-var errorDescription = "_18c1tpy4";
-var errorDetailStyle = "_18c1tpy1";
-var errorDivider = "_18c1tpy6";
-var errorFooter = "_18c1tpy5";
-var errorImage = "_18c1tpy3";
-var errorLayout = "_18c1tpy0";
-var errorTitle = "_18c1tpy2";
+// src/components/affine/affine-error-boundary/error-basic/error-detail.css.ts
+var errorDescription = "oybw1x4";
+var errorDetailStyle = "oybw1x1";
+var errorDivider = "oybw1x6";
+var errorFooter = "oybw1x5";
+var errorImage = "oybw1x3";
+var errorLayout = "oybw1x0";
+var errorTitle = "oybw1x2";
 export {
   errorDescription,
   errorDetailStyle,

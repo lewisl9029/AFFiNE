@@ -23,7 +23,10 @@ export const run = async ({
     rootDirectoryFrontendComponent,
     './src'
   );
-  const outputDirectory = path_.join(workingDirectoryStorybook, '__generated/');
+  const outputDirectoryStorybook = path_.join(
+    workingDirectoryStorybook,
+    '__generated/'
+  );
   const outputDirectoryFrontendCore = path_.join(
     workingDirectoryFrontendCore,
     '__generated/'
@@ -77,27 +80,28 @@ export const run = async ({
             ({ path }) => path.endsWith('.css') && !path.endsWith('.css.css')
           )
         );
-        // const cssOutput = result.outputFiles.find(
-        //   ({ path }) => path === path_.join(workingDirectory, 'index.css')
-        // );
+        const cssOutput = result.outputFiles.find(
+          ({ path }) =>
+            path === path_.join(workingDirectoryFrontendCore, 'index.css')
+        );
 
         await Promise.all([
-          // fs.promises.writeFile(
-          //   path_.join(outputDirectory, 'index.css'),
-          //   // vanilla extract outputs comments that seem to depend on absolute path
-          //   // need to strip them for consistent output between local and ci
-          //   cssOutput.text.replaceAll(
-          //     /\n\/\* vanilla-extract-css-ns:.*\n/g,
-          //     ''
-          //   )
-          // ),
+          fs.promises.writeFile(
+            path_.join(outputDirectoryFrontendCore, 'index.css'),
+            // vanilla extract outputs comments that seem to depend on absolute path
+            // need to strip them for consistent output between local and ci
+            cssOutput.text
+              .replaceAll(/\n\/\* vanilla-extract-css-ns:.*\n/g, '')
+              // also remove comment in first line without leading line break
+              .replace(/\/\* vanilla-extract-css-ns:.*\n/g, '')
+          ),
           (async () => {
             const { text } = result.outputFiles.find(({ path }) =>
               path.endsWith('__virtualEntryPoint.css')
             );
 
             const outputPath = path_.join(
-              outputDirectory,
+              outputDirectoryStorybook,
               've',
               path_.relative(workingDirectoryStorybook, 'main.css')
             );
@@ -152,11 +156,11 @@ export const run = async ({
     },
   };
 
-  await fs.promises.mkdir(outputDirectory, { recursive: true });
+  await fs.promises.mkdir(outputDirectoryStorybook, { recursive: true });
 
   const context = await esbuild.context({
     entryPoints: [
-      // path_.join(workingDirectory, 'index.tsx'),
+      path_.join(workingDirectoryFrontendCore, 'index.tsx'),
       // path_.join(workingDirectory, './**/**.css.ts'),
       // path_.join(workingDirectory, './**/**.stories.tsx'),
       '__virtualEntryPoint',
@@ -167,7 +171,7 @@ export const run = async ({
     bundle: true,
     // Seems like vanilla extract outputs depends on working directory
     // Keeping it at frontend root for compatibility with Vite output
-    absWorkingDir: rootDirectoryStorybook,
+    absWorkingDir: rootDirectoryFrontendCore,
     format: 'esm',
     allowOverwrite: true,
     platform: 'browser',

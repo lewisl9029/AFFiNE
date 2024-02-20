@@ -1,18 +1,18 @@
-// ../../packages/frontend/core/src/components/page-list/page-tags.css.ts
-var hoverMaxWidth = "var(--_1lx19ed0)";
-var innerBackdrop = "_1lx19ed6";
-var innerContainer = "_1lx19ed5";
-var root = "_1lx19ed1";
-var showMoreTag = "_1lx19edb";
-var tag = "_1lx19ed7";
-var tagIndicator = "_1lx19edc";
-var tagInnerWrapper = "_1lx19ed8";
-var tagLabel = "_1lx19edd";
-var tagListItem = "_1lx19eda _1lx19ed7";
-var tagSticky = "_1lx19ed9 _1lx19ed8";
-var tagsContainer = "_1lx19ed2";
-var tagsListContainer = "_1lx19ed4 _1lx19ed2";
-var tagsScrollContainer = "_1lx19ed3 _1lx19ed2";
+// src/components/page-list/page-tags.css.ts
+var hoverMaxWidth = "var(--rdf8ha0)";
+var innerBackdrop = "rdf8ha6";
+var innerContainer = "rdf8ha5";
+var root = "rdf8ha1";
+var showMoreTag = "rdf8hab";
+var tag = "rdf8ha7";
+var tagIndicator = "rdf8hac";
+var tagInnerWrapper = "rdf8ha8";
+var tagLabel = "rdf8had";
+var tagListItem = "rdf8haa rdf8ha7";
+var tagSticky = "rdf8ha9 rdf8ha8";
+var tagsContainer = "rdf8ha2";
+var tagsListContainer = "rdf8ha4 rdf8ha2";
+var tagsScrollContainer = "rdf8ha3 rdf8ha2";
 export {
   hoverMaxWidth,
   innerBackdrop,

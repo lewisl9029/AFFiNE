@@ -1,8 +1,8 @@
-// ../../packages/frontend/component/src/components/app-sidebar/quick-search-input/index.css.ts
-var icon = "eb7fnt1";
-var root = "eb7fnt0";
-var shortcutHint = "eb7fnt3";
-var spacer = "eb7fnt2";
+// ../component/src/components/app-sidebar/quick-search-input/index.css.ts
+var icon = "fv6ni91";
+var root = "fv6ni90";
+var shortcutHint = "fv6ni93";
+var spacer = "fv6ni92";
 export {
   icon,
   root,

@@ -1,18 +1,18 @@
-// ../../packages/frontend/core/src/components/affine/setting-modal/general-setting/billing/style.css.ts
-var billingFrequency = "zd8liz7";
-var billingHistorySkeleton = "zd8lizd";
-var button = "zd8lizb";
-var currentPlan = "zd8liz4";
-var currentPlanName = "zd8liza";
-var history = "zd8liz1";
-var historyContent = "zd8liz2";
-var noInvoice = "zd8liz9";
-var paymentMethod = "zd8liz8";
-var planAction = "zd8liz5";
-var planCard = "zd8liz3";
-var planPrice = "zd8liz6";
-var subscription = "zd8liz0";
-var subscriptionSettingSkeleton = "zd8lizc";
+// src/components/affine/setting-modal/general-setting/billing/style.css.ts
+var billingFrequency = "zh7gte7";
+var billingHistorySkeleton = "zh7gted";
+var button = "zh7gteb";
+var currentPlan = "zh7gte4";
+var currentPlanName = "zh7gtea";
+var history = "zh7gte1";
+var historyContent = "zh7gte2";
+var noInvoice = "zh7gte9";
+var paymentMethod = "zh7gte8";
+var planAction = "zh7gte5";
+var planCard = "zh7gte3";
+var planPrice = "zh7gte6";
+var subscription = "zh7gte0";
+var subscriptionSettingSkeleton = "zh7gtec";
 export {
   billingFrequency,
   billingHistorySkeleton,

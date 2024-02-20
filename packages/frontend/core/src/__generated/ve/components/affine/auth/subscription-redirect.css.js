@@ -1,8 +1,8 @@
-// ../../packages/frontend/core/src/components/affine/auth/subscription-redirect.css.ts
-var loadingContainer = "_1vmz68l0";
-var subscriptionBox = "_1vmz68l2";
-var subscriptionLayout = "_1vmz68l1";
-var subscriptionTips = "_1vmz68l3";
+// src/components/affine/auth/subscription-redirect.css.ts
+var loadingContainer = "_16oiwpz0";
+var subscriptionBox = "_16oiwpz2";
+var subscriptionLayout = "_16oiwpz1";
+var subscriptionTips = "_16oiwpz3";
 export {
   loadingContainer,
   subscriptionBox,

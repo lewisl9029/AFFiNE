@@ -1,7 +1,7 @@
-// ../../packages/frontend/core/src/components/affine/setting-modal/account-setting/style.css.ts
-var avatarWrapper = "lv6lld1";
-var button = "lv6lld2";
-var profileInputWrapper = "lv6lld0";
+// src/components/affine/setting-modal/account-setting/style.css.ts
+var avatarWrapper = "hs3xhm1";
+var button = "hs3xhm2";
+var profileInputWrapper = "hs3xhm0";
 export {
   avatarWrapper,
   button,

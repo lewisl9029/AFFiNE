@@ -1,7 +1,7 @@
-// ../../packages/frontend/component/src/components/app-sidebar/add-page-button/index.css.ts
-var icon = "_1oqkoc91";
-var root = "_1oqkoc90";
-var spacer = "_1oqkoc92";
+// ../component/src/components/app-sidebar/add-page-button/index.css.ts
+var icon = "_1t85tgw1";
+var root = "_1t85tgw0";
+var spacer = "_1t85tgw2";
 export {
   icon,
   root,

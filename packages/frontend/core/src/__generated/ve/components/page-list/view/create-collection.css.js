@@ -1,8 +1,8 @@
-// ../../packages/frontend/core/src/components/page-list/view/create-collection.css.ts
-var content = "_1sur9tl3";
-var createTips = "_1sur9tl1";
-var footer = "_1sur9tl0";
-var label = "_1sur9tl2";
+// src/components/page-list/view/create-collection.css.ts
+var content = "hk1ovd3";
+var createTips = "hk1ovd1";
+var footer = "hk1ovd0";
+var label = "hk1ovd2";
 export {
   content,
   createTips,

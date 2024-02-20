@@ -1,5 +1,5 @@
-// ../../packages/frontend/component/src/components/global-loading/index.css.ts
-var globalLoadingWrapperStyle = "_165ugu0";
+// ../component/src/components/global-loading/index.css.ts
+var globalLoadingWrapperStyle = "sdd15p0";
 export {
   globalLoadingWrapperStyle
 };

@@ -1,5 +1,5 @@
 import { useAFFiNEI18N } from '@affine/i18n/hooks';
-import { passwordStrength } from 'check-password-strength';
+import * as checkPasswordStrength from 'check-password-strength';
 import { type FC, useEffect } from 'react';
 import { useCallback, useState } from 'react';
 
@@ -8,6 +8,11 @@ import * as styles from '../share.css';
 import { ErrorIcon } from './error';
 import { SuccessIcon } from './success';
 import { Tag } from './tag';
+
+// TODO: fix export detection
+const passwordStrength =
+  checkPasswordStrength.passwordStrength ??
+  checkPasswordStrength.default.passwordStrength;
 
 export type Status = 'weak' | 'medium' | 'strong' | 'maximum';
 

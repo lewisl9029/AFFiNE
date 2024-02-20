@@ -25,7 +25,7 @@ function main() {
 
 function mountApp() {
   performanceMainLogger.info('import app');
-  const root = document.getElementById('app');
+  const root = document.getElementById('root');
   assertExists(root);
   performanceMainLogger.info('render app');
   createRoot(root).render(

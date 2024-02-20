@@ -1,24 +1,24 @@
-// ../../packages/frontend/core/src/components/affine/share-page-modal/share-menu/index.css.ts
-var actionsStyle = "_1axkk45";
-var buttonStyle = "_1axkk44";
-var cloudSvgContainer = "_1axkk4h";
-var columnContainerStyle = "_1axkk4b";
-var containerStyle = "_1axkk46";
-var descriptionStyle = "_1axkk43";
-var disableSharePage = "_1axkk4f";
-var headerStyle = "_1axkk40";
-var indicatorContainerStyle = "_1axkk47";
-var inputButtonRowStyle = "_1axkk48";
-var localSharePage = "_1axkk4g";
-var menuItemStyle = "_1axkk42";
-var menuStyle = "_1axkk41";
-var radioButton = "_1axkk4e";
-var radioButtonGroup = "_1axkk4d";
-var rowContainerStyle = "_1axkk4c";
-var shareIconStyle = "_1axkk4i";
-var shareLinkStyle = "_1axkk4j";
-var subTitleStyle = "_1axkk4a";
-var titleContainerStyle = "_1axkk49";
+// src/components/affine/share-page-modal/share-menu/index.css.ts
+var actionsStyle = "_1r1z3xp5";
+var buttonStyle = "_1r1z3xp4";
+var cloudSvgContainer = "_1r1z3xph";
+var columnContainerStyle = "_1r1z3xpb";
+var containerStyle = "_1r1z3xp6";
+var descriptionStyle = "_1r1z3xp3";
+var disableSharePage = "_1r1z3xpf";
+var headerStyle = "_1r1z3xp0";
+var indicatorContainerStyle = "_1r1z3xp7";
+var inputButtonRowStyle = "_1r1z3xp8";
+var localSharePage = "_1r1z3xpg";
+var menuItemStyle = "_1r1z3xp2";
+var menuStyle = "_1r1z3xp1";
+var radioButton = "_1r1z3xpe";
+var radioButtonGroup = "_1r1z3xpd";
+var rowContainerStyle = "_1r1z3xpc";
+var shareIconStyle = "_1r1z3xpi";
+var shareLinkStyle = "_1r1z3xpj";
+var subTitleStyle = "_1r1z3xpa";
+var titleContainerStyle = "_1r1z3xp9";
 export {
   actionsStyle,
   buttonStyle,

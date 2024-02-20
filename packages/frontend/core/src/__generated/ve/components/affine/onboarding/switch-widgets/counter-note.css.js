@@ -1,9 +1,9 @@
-// ../../packages/frontend/core/src/components/affine/onboarding/switch-widgets/counter-note.css.ts
-var circleAnim = "_12smisz4";
-var count = "_12smisz1";
-var counterNote = "_12smisz0";
-var fadeInAnim = "_12smisz6";
-var label = "_12smisz2";
+// src/components/affine/onboarding/switch-widgets/counter-note.css.ts
+var circleAnim = "_1tmehab4";
+var count = "_1tmehab1";
+var counterNote = "_1tmehab0";
+var fadeInAnim = "_1tmehab6";
+var label = "_1tmehab2";
 export {
   circleAnim,
   count,

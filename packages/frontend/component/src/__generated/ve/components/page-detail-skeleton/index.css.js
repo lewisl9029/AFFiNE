@@ -1,6 +1,6 @@
-// ../../packages/frontend/component/src/components/page-detail-skeleton/index.css.ts
-var pageDetailSkeletonStyle = "_15i0vxz0";
-var pageDetailSkeletonTitleStyle = "_15i0vxz1";
+// ../component/src/components/page-detail-skeleton/index.css.ts
+var pageDetailSkeletonStyle = "izf8pb0";
+var pageDetailSkeletonTitleStyle = "izf8pb1";
 export {
   pageDetailSkeletonStyle,
   pageDetailSkeletonTitleStyle

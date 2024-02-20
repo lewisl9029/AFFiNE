@@ -1,21 +1,21 @@
-// ../../packages/frontend/core/src/components/image-preview/index.css.ts
-var buttonStyle = "_19wfe8je";
-var captionStyle = "_19wfe8jh";
-var groupStyle = "_19wfe8jd";
-var imageBottomContainerStyle = "_19wfe8jg";
-var imageNavigationControlStyle = "_19wfe8j8";
-var imagePreviewActionBarStyle = "_19wfe8jc";
-var imagePreviewBackgroundStyle = "_19wfe8j2";
-var imagePreviewModalCaptionStyle = "_19wfe8jb";
-var imagePreviewModalCenterStyle = "_19wfe8ja";
-var imagePreviewModalCloseButtonStyle = "_19wfe8j6";
-var imagePreviewModalContainerStyle = "_19wfe8j9";
-var imagePreviewModalGoStyle = "_19wfe8j7";
-var imagePreviewModalStyle = "_19wfe8j3";
-var loaded = "_19wfe8j4";
-var scaleIndicatorButtonStyle = "_19wfe8jf";
-var suspenseFallbackStyle = "_19wfe8ji";
-var unloaded = "_19wfe8j5";
+// src/components/image-preview/index.css.ts
+var buttonStyle = "_1l7i9wwe";
+var captionStyle = "_1l7i9wwh";
+var groupStyle = "_1l7i9wwd";
+var imageBottomContainerStyle = "_1l7i9wwg";
+var imageNavigationControlStyle = "_1l7i9ww8";
+var imagePreviewActionBarStyle = "_1l7i9wwc";
+var imagePreviewBackgroundStyle = "_1l7i9ww2";
+var imagePreviewModalCaptionStyle = "_1l7i9wwb";
+var imagePreviewModalCenterStyle = "_1l7i9wwa";
+var imagePreviewModalCloseButtonStyle = "_1l7i9ww6";
+var imagePreviewModalContainerStyle = "_1l7i9ww9";
+var imagePreviewModalGoStyle = "_1l7i9ww7";
+var imagePreviewModalStyle = "_1l7i9ww3";
+var loaded = "_1l7i9ww4";
+var scaleIndicatorButtonStyle = "_1l7i9wwf";
+var suspenseFallbackStyle = "_1l7i9wwi";
+var unloaded = "_1l7i9ww5";
 export {
   buttonStyle,
   captionStyle,

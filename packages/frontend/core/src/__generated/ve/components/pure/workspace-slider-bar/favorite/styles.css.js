@@ -1,17 +1,17 @@
-// ../../packages/frontend/core/src/components/pure/workspace-slider-bar/favorite/styles.css.ts
-var collapsibleContent = "osrwi34";
-var collapsibleContentInner = "osrwi35";
-var dragPageItemOverlay = "osrwi37";
-var emptyFavouritesContent = "osrwi3b";
-var emptyFavouritesIcon = "osrwi3d";
-var emptyFavouritesIconWrapper = "osrwi3c";
-var emptyFavouritesMessage = "osrwi3e";
-var favItem = "osrwi36";
-var favItemWrapper = "osrwi31";
-var favoriteList = "osrwi38";
-var favoritePostfixItem = "osrwi39";
-var label = "osrwi30";
-var menuItem = "osrwi3a";
+// src/components/pure/workspace-slider-bar/favorite/styles.css.ts
+var collapsibleContent = "y64k9r4";
+var collapsibleContentInner = "y64k9r5";
+var dragPageItemOverlay = "y64k9r7";
+var emptyFavouritesContent = "y64k9rb";
+var emptyFavouritesIcon = "y64k9rd";
+var emptyFavouritesIconWrapper = "y64k9rc";
+var emptyFavouritesMessage = "y64k9re";
+var favItem = "y64k9r6";
+var favItemWrapper = "y64k9r1";
+var favoriteList = "y64k9r8";
+var favoritePostfixItem = "y64k9r9";
+var label = "y64k9r0";
+var menuItem = "y64k9ra";
 export {
   collapsibleContent,
   collapsibleContentInner,

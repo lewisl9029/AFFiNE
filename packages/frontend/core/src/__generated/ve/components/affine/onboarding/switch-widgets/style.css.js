@@ -1,10 +1,10 @@
-// ../../packages/frontend/core/src/components/affine/onboarding/switch-widgets/style.css.ts
-var onboardingBlock = "_1pylyip5 _1ccil190";
-var shadowSticker = "_1pylyip7";
-var switchButton = "_1pylyip1";
-var switchButtons = "_1pylyip0";
-var toolbar = "_1pylyip3";
-var toolbarPop = "_1pylyip4";
+// src/components/affine/onboarding/switch-widgets/style.css.ts
+var onboardingBlock = "u537b5 _6c62k80";
+var shadowSticker = "u537b7";
+var switchButton = "u537b1";
+var switchButtons = "u537b0";
+var toolbar = "u537b3";
+var toolbarPop = "u537b4";
 export {
   onboardingBlock,
   shadowSticker,

@@ -1,16 +1,16 @@
-// ../../packages/frontend/component/src/ui/modal/styles.css.ts
-var closeButton = "_7qk7zk6";
-var confirmModalContainer = "_7qk7zkb";
-var confirmModalContent = "_7qk7zka";
-var heightVar = "var(--_7qk7zk1)";
-var minHeightVar = "var(--_7qk7zk2)";
-var modalContent = "_7qk7zk5";
-var modalContentWrapper = "_7qk7zk4";
-var modalDescription = "_7qk7zk8";
-var modalFooter = "_7qk7zk9";
-var modalHeader = "_7qk7zk7";
-var modalOverlay = "_7qk7zk3";
-var widthVar = "var(--_7qk7zk0)";
+// ../component/src/ui/modal/styles.css.ts
+var closeButton = "gd07mt6";
+var confirmModalContainer = "gd07mtb";
+var confirmModalContent = "gd07mta";
+var heightVar = "var(--gd07mt1)";
+var minHeightVar = "var(--gd07mt2)";
+var modalContent = "gd07mt5";
+var modalContentWrapper = "gd07mt4";
+var modalDescription = "gd07mt8";
+var modalFooter = "gd07mt9";
+var modalHeader = "gd07mt7";
+var modalOverlay = "gd07mt3";
+var widthVar = "var(--gd07mt0)";
 export {
   closeButton,
   confirmModalContainer,

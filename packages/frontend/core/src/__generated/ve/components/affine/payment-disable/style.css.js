@@ -1,5 +1,5 @@
-// ../../packages/frontend/core/src/components/affine/payment-disable/style.css.ts
-var paymentDisableModalContent = "h5r7py0";
+// src/components/affine/payment-disable/style.css.ts
+var paymentDisableModalContent = "_191hnsb0";
 export {
   paymentDisableModalContent
 };

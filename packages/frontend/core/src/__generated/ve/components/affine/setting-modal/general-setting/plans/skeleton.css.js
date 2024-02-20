@@ -1,8 +1,8 @@
-// ../../packages/frontend/core/src/components/affine/setting-modal/general-setting/plans/skeleton.css.ts
-var planItemCard = "_4huq001";
-var planItemContent = "_4huq003";
-var planItemHeader = "_4huq002";
-var plansWrapper = "_4huq000";
+// src/components/affine/setting-modal/general-setting/plans/skeleton.css.ts
+var planItemCard = "_53hdpt1";
+var planItemContent = "_53hdpt3";
+var planItemHeader = "_53hdpt2";
+var plansWrapper = "_53hdpt0";
 export {
   planItemCard,
   planItemContent,

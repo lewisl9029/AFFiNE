@@ -1,6 +1,6 @@
-// ../../packages/frontend/component/src/ui/loading/styles.css.ts
-var loading = "_1yynwxp2";
-var speedVar = "var(--_1yynwxp0)";
+// ../component/src/ui/loading/styles.css.ts
+var loading = "_12my2lx2";
+var speedVar = "var(--_12my2lx0)";
 export {
   loading,
   speedVar

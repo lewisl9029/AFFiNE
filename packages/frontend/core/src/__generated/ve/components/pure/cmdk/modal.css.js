@@ -1,7 +1,7 @@
-// ../../packages/frontend/core/src/components/pure/cmdk/modal.css.ts
-var modalContent = "fg41lo4";
-var modalContentWrapper = "fg41lo3";
-var modalOverlay = "fg41lo2";
+// src/components/pure/cmdk/modal.css.ts
+var modalContent = "_1s7yi8c4";
+var modalContentWrapper = "_1s7yi8c3";
+var modalOverlay = "_1s7yi8c2";
 export {
   modalContent,
   modalContentWrapper,

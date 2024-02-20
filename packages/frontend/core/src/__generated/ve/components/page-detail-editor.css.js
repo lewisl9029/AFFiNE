@@ -1,5 +1,5 @@
-// ../../packages/frontend/core/src/components/page-detail-editor.css.ts
-var editor = "_1b3d6bq0";
+// src/components/page-detail-editor.css.ts
+var editor = "_1tptcrh0";
 export {
   editor
 };

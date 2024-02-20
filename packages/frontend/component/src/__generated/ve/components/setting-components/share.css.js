@@ -1,11 +1,11 @@
-// ../../packages/frontend/component/src/components/setting-components/share.css.ts
-var settingHeader = "_1qhykns0";
-var settingRow = "_1qhykns2";
-var storageButton = "_1qhykns6";
-var storageProgressBar = "_1qhykns5";
-var storageProgressContainer = "_1qhykns3";
-var storageProgressWrapper = "_1qhykns4";
-var wrapper = "_1qhykns1";
+// ../component/src/components/setting-components/share.css.ts
+var settingHeader = "_69kjl70";
+var settingRow = "_69kjl72";
+var storageButton = "_69kjl76";
+var storageProgressBar = "_69kjl75";
+var storageProgressContainer = "_69kjl73";
+var storageProgressWrapper = "_69kjl74";
+var wrapper = "_69kjl71";
 export {
   settingHeader,
   settingRow,

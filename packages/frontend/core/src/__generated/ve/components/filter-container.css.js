@@ -1,5 +1,5 @@
-// ../../packages/frontend/core/src/components/filter-container.css.ts
-var filterContainerStyle = "_9tohm30";
+// src/components/filter-container.css.ts
+var filterContainerStyle = "gaxpgb0";
 export {
   filterContainerStyle
 };

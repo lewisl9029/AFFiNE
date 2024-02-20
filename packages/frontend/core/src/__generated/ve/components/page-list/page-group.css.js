@@ -1,15 +1,15 @@
-// ../../packages/frontend/core/src/components/page-list/page-group.css.ts
-var collapsedIcon = "_8cpvywb";
-var collapsedIconContainer = "_8cpvywc";
-var collapsibleContent = "_8cpvyw3";
-var collapsibleContentInner = "_8cpvyw4";
-var header = "_8cpvyw5";
-var headerCollapseIcon = "_8cpvyw7";
-var headerCount = "_8cpvyw9";
-var headerLabel = "_8cpvyw8";
-var root = "_8cpvyw0";
-var selectAllButton = "_8cpvywa";
-var spacer = "_8cpvyw6";
+// src/components/page-list/page-group.css.ts
+var collapsedIcon = "_180tl61b";
+var collapsedIconContainer = "_180tl61c";
+var collapsibleContent = "_180tl613";
+var collapsibleContentInner = "_180tl614";
+var header = "_180tl615";
+var headerCollapseIcon = "_180tl617";
+var headerCount = "_180tl619";
+var headerLabel = "_180tl618";
+var root = "_180tl610";
+var selectAllButton = "_180tl61a";
+var spacer = "_180tl616";
 export {
   collapsedIcon,
   collapsedIconContainer,

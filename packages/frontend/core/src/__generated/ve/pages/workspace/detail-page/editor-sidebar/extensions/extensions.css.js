@@ -1,7 +1,7 @@
-// ../../packages/frontend/core/src/pages/workspace/detail-page/editor-sidebar/extensions/extensions.css.ts
-var activeIdx = "var(--qz0v2p0)";
-var button = "qz0v2p2";
-var switchRoot = "qz0v2p1";
+// src/pages/workspace/detail-page/editor-sidebar/extensions/extensions.css.ts
+var activeIdx = "var(--pbuxp10)";
+var button = "pbuxp12";
+var switchRoot = "pbuxp11";
 export {
   activeIdx,
   button,

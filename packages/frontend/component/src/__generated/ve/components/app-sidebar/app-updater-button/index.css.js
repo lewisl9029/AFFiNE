@@ -1,18 +1,18 @@
-// ../../packages/frontend/component/src/components/app-sidebar/app-updater-button/index.css.ts
-var closeIcon = "_1ipgo3j2";
-var ellipsisTextOverflow = "_1ipgo3j9";
-var halo = "_1ipgo3jd";
-var icon = "_1ipgo3j1";
-var installLabel = "_1ipgo3j3";
-var installLabelHover = "_1ipgo3j5 _1ipgo3j3";
-var installLabelNormal = "_1ipgo3j4 _1ipgo3j3";
-var particles = "_1ipgo3jc";
-var progress = "_1ipgo3ja";
-var progressInner = "_1ipgo3jb";
-var root = "_1ipgo3j0";
-var updateAvailableWrapper = "_1ipgo3j6";
-var versionLabel = "_1ipgo3j7";
-var whatsNewLabel = "_1ipgo3j8";
+// ../component/src/components/app-sidebar/app-updater-button/index.css.ts
+var closeIcon = "_2mrvb12";
+var ellipsisTextOverflow = "_2mrvb19";
+var halo = "_2mrvb1d";
+var icon = "_2mrvb11";
+var installLabel = "_2mrvb13";
+var installLabelHover = "_2mrvb15 _2mrvb13";
+var installLabelNormal = "_2mrvb14 _2mrvb13";
+var particles = "_2mrvb1c";
+var progress = "_2mrvb1a";
+var progressInner = "_2mrvb1b";
+var root = "_2mrvb10";
+var updateAvailableWrapper = "_2mrvb16";
+var versionLabel = "_2mrvb17";
+var whatsNewLabel = "_2mrvb18";
 export {
   closeIcon,
   ellipsisTextOverflow,

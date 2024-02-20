@@ -1,12 +1,12 @@
-// ../../packages/frontend/component/src/components/app-sidebar/index.css.ts
+// ../component/src/components/app-sidebar/index.css.ts
 var floatingMaxWidth = 768;
-var navBodyStyle = "c1n4dl5";
-var navHeaderButton = "c1n4dl1";
-var navHeaderNavigationButtons = "c1n4dl2";
-var navHeaderStyle = "c1n4dl4";
-var navStyle = "c1n4dl3";
-var navWrapperStyle = "c1n4dl0";
-var sidebarFloatMaskStyle = "c1n4dl6";
+var navBodyStyle = "_1m6oi2t5";
+var navHeaderButton = "_1m6oi2t1";
+var navHeaderNavigationButtons = "_1m6oi2t2";
+var navHeaderStyle = "_1m6oi2t4";
+var navStyle = "_1m6oi2t3";
+var navWrapperStyle = "_1m6oi2t0";
+var sidebarFloatMaskStyle = "_1m6oi2t6";
 export {
   floatingMaxWidth,
   navBodyStyle,

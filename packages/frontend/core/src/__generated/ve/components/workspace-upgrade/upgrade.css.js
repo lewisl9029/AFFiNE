@@ -1,8 +1,8 @@
-// ../../packages/frontend/core/src/components/workspace-upgrade/upgrade.css.ts
-var layout = "jzr3c20";
-var loadingIcon = "jzr3c24";
-var upgradeBox = "jzr3c21";
-var upgradeTips = "jzr3c22";
+// src/components/workspace-upgrade/upgrade.css.ts
+var layout = "hz7r830";
+var loadingIcon = "hz7r834";
+var upgradeBox = "hz7r831";
+var upgradeTips = "hz7r832";
 export {
   layout,
   loadingIcon,

@@ -1,21 +1,21 @@
-// ../../packages/frontend/component/src/components/auth-components/onboarding-page.css.ts
-var button = "_1lj9g819";
-var buttonWrapper = "_1lj9g815";
-var checkBox = "_1lj9g816";
-var content = "_1lj9g812";
-var input = "_1lj9g818";
-var label = "_1lj9g817";
-var link = "_1lj9g81g";
-var linkGroup = "_1lj9g81f";
-var onboardingContainer = "_1lj9g811";
-var openAFFiNEButton = "_1lj9g81a";
-var optionsWrapper = "_1lj9g814";
-var question = "_1lj9g813";
-var rightCornerButton = "_1lj9g81b";
-var scrollableContainer = "_1lj9g810";
-var thankContainer = "_1lj9g81c";
-var thankText = "_1lj9g81e";
-var thankTitle = "_1lj9g81d";
+// ../component/src/components/auth-components/onboarding-page.css.ts
+var button = "_1dia6id9";
+var buttonWrapper = "_1dia6id5";
+var checkBox = "_1dia6id6";
+var content = "_1dia6id2";
+var input = "_1dia6id8";
+var label = "_1dia6id7";
+var link = "_1dia6idg";
+var linkGroup = "_1dia6idf";
+var onboardingContainer = "_1dia6id1";
+var openAFFiNEButton = "_1dia6ida";
+var optionsWrapper = "_1dia6id4";
+var question = "_1dia6id3";
+var rightCornerButton = "_1dia6idb";
+var scrollableContainer = "_1dia6id0";
+var thankContainer = "_1dia6idc";
+var thankText = "_1dia6ide";
+var thankTitle = "_1dia6idd";
 export {
   button,
   buttonWrapper,

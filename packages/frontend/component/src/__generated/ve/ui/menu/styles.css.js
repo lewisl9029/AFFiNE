@@ -1,11 +1,11 @@
-// ../../packages/frontend/component/src/ui/menu/styles.css.ts
-var menuContent = "_18xx6g41";
-var menuItem = "_18xx6g42";
-var menuItemIcon = "_18xx6g44";
-var menuSeparator = "_18xx6g45";
-var menuSpan = "_18xx6g43";
-var menuTrigger = "_18xx6g46";
-var triggerWidthVar = "var(--_18xx6g40)";
+// ../component/src/ui/menu/styles.css.ts
+var menuContent = "tylnmq1";
+var menuItem = "tylnmq2";
+var menuItemIcon = "tylnmq4";
+var menuSeparator = "tylnmq5";
+var menuSpan = "tylnmq3";
+var menuTrigger = "tylnmq6";
+var triggerWidthVar = "var(--tylnmq0)";
 export {
   menuContent,
   menuItem,

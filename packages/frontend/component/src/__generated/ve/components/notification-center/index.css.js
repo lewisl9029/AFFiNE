@@ -1,35 +1,35 @@
-// ../../packages/frontend/component/src/components/notification-center/index.css.ts
-var closeButtonColorStyle = "_1o3uhfpd";
-var closeButtonStyle = "_1o3uhfpa";
-var closeButtonWithMediaStyle = "_1o3uhfpc";
-var closeButtonWithoutUndoStyle = "_1o3uhfpb";
-var darkCollapseStyle = { secondary: "_1o3uhfpw", tertiary: "_1o3uhfpx" };
-var darkColorStyle = "_1o3uhfpq";
-var darkErrorStyle = "_1o3uhfpk";
-var darkInfoStyle = "_1o3uhfpj";
-var darkSuccessStyle = "_1o3uhfpi";
-var darkWarningStyle = "_1o3uhfpl";
-var defaultCollapseStyle = { secondary: "_1o3uhfps", tertiary: "_1o3uhfpt" };
-var hasMediaStyle = "_1o3uhfp4";
-var lightCollapseStyle = { secondary: "_1o3uhfpu", tertiary: "_1o3uhfpv" };
-var lightErrorStyle = "_1o3uhfpo";
-var lightInfoIconStyle = "_1o3uhfpr";
-var lightInfoStyle = "_1o3uhfpn";
-var lightSuccessStyle = "_1o3uhfpm";
-var lightWarningStyle = "_1o3uhfpp";
-var messageStyle = "_1o3uhfpg";
-var notificationCenterViewportStyle = "_1o3uhfp0";
-var notificationContentStyle = "_1o3uhfp5";
-var notificationDescriptionStyle = "_1o3uhfp8";
-var notificationIconStyle = "_1o3uhfp3";
-var notificationMultimediaStyle = "_1o3uhfp1";
-var notificationStyle = "_1o3uhfp2";
-var notificationTimeStyle = "_1o3uhfp9";
-var notificationTitleContactStyle = "_1o3uhfp6";
-var notificationTitleStyle = "_1o3uhfp7";
-var progressBarStyle = "_1o3uhfph";
-var undoButtonStyle = "_1o3uhfpe";
-var undoButtonWithMediaStyle = "_1o3uhfpf";
+// ../component/src/components/notification-center/index.css.ts
+var closeButtonColorStyle = "_1bxv0aqd";
+var closeButtonStyle = "_1bxv0aqa";
+var closeButtonWithMediaStyle = "_1bxv0aqc";
+var closeButtonWithoutUndoStyle = "_1bxv0aqb";
+var darkCollapseStyle = { secondary: "_1bxv0aqw", tertiary: "_1bxv0aqx" };
+var darkColorStyle = "_1bxv0aqq";
+var darkErrorStyle = "_1bxv0aqk";
+var darkInfoStyle = "_1bxv0aqj";
+var darkSuccessStyle = "_1bxv0aqi";
+var darkWarningStyle = "_1bxv0aql";
+var defaultCollapseStyle = { secondary: "_1bxv0aqs", tertiary: "_1bxv0aqt" };
+var hasMediaStyle = "_1bxv0aq4";
+var lightCollapseStyle = { secondary: "_1bxv0aqu", tertiary: "_1bxv0aqv" };
+var lightErrorStyle = "_1bxv0aqo";
+var lightInfoIconStyle = "_1bxv0aqr";
+var lightInfoStyle = "_1bxv0aqn";
+var lightSuccessStyle = "_1bxv0aqm";
+var lightWarningStyle = "_1bxv0aqp";
+var messageStyle = "_1bxv0aqg";
+var notificationCenterViewportStyle = "_1bxv0aq0";
+var notificationContentStyle = "_1bxv0aq5";
+var notificationDescriptionStyle = "_1bxv0aq8";
+var notificationIconStyle = "_1bxv0aq3";
+var notificationMultimediaStyle = "_1bxv0aq1";
+var notificationStyle = "_1bxv0aq2";
+var notificationTimeStyle = "_1bxv0aq9";
+var notificationTitleContactStyle = "_1bxv0aq6";
+var notificationTitleStyle = "_1bxv0aq7";
+var progressBarStyle = "_1bxv0aqh";
+var undoButtonStyle = "_1bxv0aqe";
+var undoButtonWithMediaStyle = "_1bxv0aqf";
 export {
   closeButtonColorStyle,
   closeButtonStyle,

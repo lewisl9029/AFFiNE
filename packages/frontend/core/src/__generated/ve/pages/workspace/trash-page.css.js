@@ -1,7 +1,7 @@
-// ../../packages/frontend/core/src/pages/workspace/trash-page.css.ts
-var root = "v92qta0";
-var trashIcon = "_1r09zx41";
-var trashTitle = "_1r09zx40";
+// src/pages/workspace/trash-page.css.ts
+var root = "bl6pcs0";
+var trashIcon = "_1im6xhp1";
+var trashTitle = "_1im6xhp0";
 export {
   root,
   trashIcon,

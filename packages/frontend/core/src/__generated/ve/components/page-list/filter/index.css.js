@@ -1,14 +1,14 @@
-// ../../packages/frontend/core/src/components/page-list/filter/index.css.ts
-var filterItemCloseStyle = "afv6t45";
-var filterItemStyle = "afv6t44";
-var filterTypeIconStyle = "afv6t49";
-var filterTypeStyle = "afv6t48";
-var inputStyle = "afv6t46";
-var menuItemStyle = "afv6t40";
-var menuItemTextStyle = "afv6t43";
-var switchStyle = "afv6t47";
-var variableSelectDividerStyle = "afv6t42";
-var variableSelectTitleStyle = "afv6t41";
+// src/components/page-list/filter/index.css.ts
+var filterItemCloseStyle = "xshxz65";
+var filterItemStyle = "xshxz64";
+var filterTypeIconStyle = "xshxz69";
+var filterTypeStyle = "xshxz68";
+var inputStyle = "xshxz66";
+var menuItemStyle = "xshxz60";
+var menuItemTextStyle = "xshxz63";
+var switchStyle = "xshxz67";
+var variableSelectDividerStyle = "xshxz62";
+var variableSelectTitleStyle = "xshxz61";
 export {
   filterItemCloseStyle,
   filterItemStyle,

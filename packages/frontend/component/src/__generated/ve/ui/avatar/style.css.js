@@ -1,17 +1,17 @@
-// ../../packages/frontend/component/src/ui/avatar/style.css.ts
-var DefaultAvatarBottomItemStyle = "_8o49j36";
-var DefaultAvatarBottomItemWithAnimationStyle = "_8o49j37";
-var DefaultAvatarContainerStyle = "_8o49j33";
-var DefaultAvatarMiddleItemStyle = "_8o49j34";
-var DefaultAvatarMiddleItemWithAnimationStyle = "_8o49j35";
-var DefaultAvatarTopItemStyle = "_8o49j38";
-var avatarFallback = "_8o49j3c";
-var avatarImage = "_8o49j3b";
-var avatarRoot = "_8o49j39";
-var avatarWrapper = "_8o49j3a";
-var hoverWrapper = "_8o49j3d";
-var removeButton = "_8o49j3e";
-var sizeVar = "var(--_8o49j30)";
+// ../component/src/ui/avatar/style.css.ts
+var DefaultAvatarBottomItemStyle = "_1ezzio16";
+var DefaultAvatarBottomItemWithAnimationStyle = "_1ezzio17";
+var DefaultAvatarContainerStyle = "_1ezzio13";
+var DefaultAvatarMiddleItemStyle = "_1ezzio14";
+var DefaultAvatarMiddleItemWithAnimationStyle = "_1ezzio15";
+var DefaultAvatarTopItemStyle = "_1ezzio18";
+var avatarFallback = "_1ezzio1c";
+var avatarImage = "_1ezzio1b";
+var avatarRoot = "_1ezzio19";
+var avatarWrapper = "_1ezzio1a";
+var hoverWrapper = "_1ezzio1d";
+var removeButton = "_1ezzio1e";
+var sizeVar = "var(--_1ezzio10)";
 export {
   DefaultAvatarBottomItemStyle,
   DefaultAvatarBottomItemWithAnimationStyle,

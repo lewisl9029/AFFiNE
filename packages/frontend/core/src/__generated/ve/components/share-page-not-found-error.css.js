@@ -1,5 +1,5 @@
-// ../../packages/frontend/core/src/components/share-page-not-found-error.css.ts
-var iconWrapper = "_120rln20";
+// src/components/share-page-not-found-error.css.ts
+var iconWrapper = "_5pvmne0";
 export {
   iconWrapper
 };

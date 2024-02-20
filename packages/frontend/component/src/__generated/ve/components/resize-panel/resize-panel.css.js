@@ -1,11 +1,11 @@
-// ../../packages/frontend/component/src/components/resize-panel/resize-panel.css.ts
-var panelContent = "_1m7zx544";
-var panelWidthVar = "var(--_1m7zx540)";
-var resizeHandleContainer = "_1m7zx545";
-var resizeHandleOffsetVar = "var(--_1m7zx541)";
-var resizeHandleVerticalPadding = "var(--_1m7zx542)";
-var resizerInner = "_1m7zx546";
-var root = "_1m7zx543";
+// ../component/src/components/resize-panel/resize-panel.css.ts
+var panelContent = "_1ljjukj4";
+var panelWidthVar = "var(--_1ljjukj0)";
+var resizeHandleContainer = "_1ljjukj5";
+var resizeHandleOffsetVar = "var(--_1ljjukj1)";
+var resizeHandleVerticalPadding = "var(--_1ljjukj2)";
+var resizerInner = "_1ljjukj6";
+var root = "_1ljjukj3";
 export {
   panelContent,
   panelWidthVar,

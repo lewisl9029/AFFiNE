@@ -1,16 +1,16 @@
-// ../../packages/frontend/component/src/components/auth-components/share.css.ts
-var authCodeContainer = "_10a95h56";
-var authCodeErrorMessage = "_10a95h58";
-var authCodeWrapper = "_10a95h57";
-var authContent = "_10a95h55";
-var authInputWrapper = "_10a95h51";
-var authPageContainer = "_10a95h5a";
-var formHint = "_10a95h52";
-var input = "_10a95h5c";
-var loading = "_10a95h54";
-var modalHeaderWrapper = "_10a95h50";
-var resendButtonWrapper = "_10a95h59";
-var signInPageContainer = "_10a95h5b";
+// ../component/src/components/auth-components/share.css.ts
+var authCodeContainer = "ce74gp6";
+var authCodeErrorMessage = "ce74gp8";
+var authCodeWrapper = "ce74gp7";
+var authContent = "ce74gp5";
+var authInputWrapper = "ce74gp1";
+var authPageContainer = "ce74gpa";
+var formHint = "ce74gp2";
+var input = "ce74gpc";
+var loading = "ce74gp4";
+var modalHeaderWrapper = "ce74gp0";
+var resendButtonWrapper = "ce74gp9";
+var signInPageContainer = "ce74gpb";
 export {
   authCodeContainer,
   authCodeErrorMessage,

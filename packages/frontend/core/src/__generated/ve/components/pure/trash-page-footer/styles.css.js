@@ -1,9 +1,9 @@
-// ../../packages/frontend/core/src/components/pure/trash-page-footer/styles.css.ts
-var buttonContainer = "_1qgkyjy3";
-var deleteHintContainer = "_1qgkyjy1";
-var deleteHintText = "_1qgkyjy2";
-var group = "_1qgkyjy0";
-var icon = "_1qgkyjy4";
+// src/components/pure/trash-page-footer/styles.css.ts
+var buttonContainer = "u61plk3";
+var deleteHintContainer = "u61plk1";
+var deleteHintText = "u61plk2";
+var group = "u61plk0";
+var icon = "u61plk4";
 export {
   buttonContainer,
   deleteHintContainer,

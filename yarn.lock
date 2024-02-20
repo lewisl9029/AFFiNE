@@ -287,7 +287,7 @@ __metadata:
   peerDependencies:
     "@blocksuite/blocks": "*"
     "@blocksuite/global": "*"
-    "@blocksuite/icons": 2.1.34
+    "@blocksuite/icons": 2.1.40
     "@blocksuite/presets": "*"
     "@blocksuite/store": "*"
   languageName: unknown
@@ -350,7 +350,7 @@ __metadata:
     async-call-rpc: "npm:^6.3.1"
     bytes: "npm:^3.1.2"
     clsx: "npm:^2.0.0"
-    cmdk: "npm:^0.2.0"
+    cmdk: "npm:^0.2.1"
     copy-webpack-plugin: "npm:^11.0.0"
     css-loader: "npm:^6.8.1"
     css-spring: "npm:^4.1.0"
@@ -783,7 +783,7 @@ __metadata:
   peerDependencies:
     "@blocksuite/blocks": "*"
     "@blocksuite/global": "*"
-    "@blocksuite/icons": 2.1.34
+    "@blocksuite/icons": 2.1.40
     "@blocksuite/presets": "*"
     "@blocksuite/store": "*"
   languageName: unknown
@@ -18444,16 +18444,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cmdk@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "cmdk@npm:0.2.0"
+"cmdk@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "cmdk@npm:0.2.1"
   dependencies:
     "@radix-ui/react-dialog": "npm:1.0.0"
-    command-score: "npm:0.1.2"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: e178e3d3276e0b5fd158c9c99716c0405427871f48fa97c15c4be2de24be4a478cf0205ffa04244628dbe103dd8573a1bd1aa68f04f8b60633d4ffc04e5eee62
+  checksum: f2f90cafa026d7905c76147a032caa202eeab28b267b90ac22d2e9a93fbbee92735e530eeac7cc5e5e1d0978424b0743264da144570e2646bf89f6ccf10e91c2
   languageName: node
   linkType: hard
 
@@ -18599,13 +18598,6 @@ __metadata:
   version: 2.0.3
   resolution: "comma-separated-tokens@npm:2.0.3"
   checksum: e3bf9e0332a5c45f49b90e79bcdb4a7a85f28d6a6f0876a94f1bb9b2bfbdbbb9292aac50e1e742d8c0db1e62a0229a106f57917e2d067fca951d81737651700d
-  languageName: node
-  linkType: hard
-
-"command-score@npm:0.1.2":
-  version: 0.1.2
-  resolution: "command-score@npm:0.1.2"
-  checksum: 84f6a69e6b215d3fc8c9ed402d109587f511e4cc84cd5da10a7857b50fb1638953e32dcce8ed8f3549b0bfe499e82601fb7fb6891c9c71b48933d4bb8bac238a
   languageName: node
   linkType: hard
 

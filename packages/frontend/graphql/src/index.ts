@@ -13,6 +13,7 @@ export function getBaseUrl(): string {
   if (environment.isDesktop) {
     return runtimeConfig.serverUrlPrefix;
   }
+  return 'https://app.affine.pro/graphql';
   const { protocol, hostname, port } = window.location;
   return `${protocol}//${hostname}${port ? `:${port}` : ''}`;
 }

@@ -1,11 +1,11 @@
-// ../../packages/frontend/core/src/components/affine/onboarding/articles/blocks.css.ts
-var block = "_1ccil190";
-var hr = "_1ccil196";
-var link = "_1ccil191";
-var pageLink = "_1ccil192";
-var pageLinkIcon = "_1ccil193";
-var pageLinkLabel = "_1ccil194";
-var quote = "_1ccil195";
+// src/components/affine/onboarding/articles/blocks.css.ts
+var block = "_6c62k80";
+var hr = "_6c62k86";
+var link = "_6c62k81";
+var pageLink = "_6c62k82";
+var pageLinkIcon = "_6c62k83";
+var pageLinkLabel = "_6c62k84";
+var quote = "_6c62k85";
 export {
   block,
   hr,

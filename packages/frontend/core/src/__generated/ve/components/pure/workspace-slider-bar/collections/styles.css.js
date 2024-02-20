@@ -1,19 +1,19 @@
-// ../../packages/frontend/core/src/components/pure/workspace-slider-bar/collections/styles.css.ts
-var collapsedIcon = "_1en1b31";
-var collapsibleContent = "_1en1b3a";
-var deleteFolder = "_1en1b36";
-var emptyCollectionContent = "_1en1b3c";
-var emptyCollectionIcon = "_1en1b3e";
-var emptyCollectionIconWrapper = "_1en1b3d";
-var emptyCollectionMessage = "_1en1b3f";
-var emptyCollectionNewButton = "_1en1b3g";
-var emptyCollectionWrapper = "_1en1b3b";
-var menuDividerStyle = "_1en1b37";
-var more = "_1en1b35";
-var title = "_1en1b34";
-var view = "_1en1b32";
-var viewTitle = "_1en1b33";
-var wrapper = "_1en1b30";
+// src/components/pure/workspace-slider-bar/collections/styles.css.ts
+var collapsedIcon = "_1w4d9it1";
+var collapsibleContent = "_1w4d9ita";
+var deleteFolder = "_1w4d9it6";
+var emptyCollectionContent = "_1w4d9itc";
+var emptyCollectionIcon = "_1w4d9ite";
+var emptyCollectionIconWrapper = "_1w4d9itd";
+var emptyCollectionMessage = "_1w4d9itf";
+var emptyCollectionNewButton = "_1w4d9itg";
+var emptyCollectionWrapper = "_1w4d9itb";
+var menuDividerStyle = "_1w4d9it7";
+var more = "_1w4d9it5";
+var title = "_1w4d9it4";
+var view = "_1w4d9it2";
+var viewTitle = "_1w4d9it3";
+var wrapper = "_1w4d9it0";
 export {
   collapsedIcon,
   collapsibleContent,

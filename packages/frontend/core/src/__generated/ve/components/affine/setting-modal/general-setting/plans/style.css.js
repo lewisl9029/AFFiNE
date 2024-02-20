@@ -1,29 +1,29 @@
-// ../../packages/frontend/core/src/components/affine/setting-modal/general-setting/plans/style.css.ts
-var discountLabel = "nvqtq08";
-var downgradeCaption = "nvqtq0k";
-var downgradeContent = "nvqtq0j";
-var downgradeContentWrapper = "nvqtq0i";
-var downgradeFooter = "nvqtq0l";
-var errorTip = "nvqtq0n";
-var errorTipRetry = "nvqtq0o";
-var planAction = "nvqtq0d";
-var planBenefit = "nvqtq0f";
-var planBenefitIcon = "nvqtq0g";
-var planBenefitText = "nvqtq0h";
-var planBenefits = "nvqtq0e";
-var planCard = "nvqtq05";
-var planCardsWrapper = "nvqtq04";
-var planPrice = "nvqtq0b";
-var planPriceDesc = "nvqtq0c";
-var planPriceWrapper = "nvqtq0a";
-var planTitle = "nvqtq09";
-var proPlanCard = "nvqtq06 nvqtq05";
-var proPlanTitle = "nvqtq07";
-var radioButtonDiscount = "nvqtq02";
-var radioButtonText = "nvqtq03";
-var recurringRadioGroup = "nvqtq01";
-var textEmphasis = "nvqtq0m";
-var wrapper = "nvqtq00";
+// src/components/affine/setting-modal/general-setting/plans/style.css.ts
+var discountLabel = "_9e62hm8";
+var downgradeCaption = "_9e62hmk";
+var downgradeContent = "_9e62hmj";
+var downgradeContentWrapper = "_9e62hmi";
+var downgradeFooter = "_9e62hml";
+var errorTip = "_9e62hmn";
+var errorTipRetry = "_9e62hmo";
+var planAction = "_9e62hmd";
+var planBenefit = "_9e62hmf";
+var planBenefitIcon = "_9e62hmg";
+var planBenefitText = "_9e62hmh";
+var planBenefits = "_9e62hme";
+var planCard = "_9e62hm5";
+var planCardsWrapper = "_9e62hm4";
+var planPrice = "_9e62hmb";
+var planPriceDesc = "_9e62hmc";
+var planPriceWrapper = "_9e62hma";
+var planTitle = "_9e62hm9";
+var proPlanCard = "_9e62hm6 _9e62hm5";
+var proPlanTitle = "_9e62hm7";
+var radioButtonDiscount = "_9e62hm2";
+var radioButtonText = "_9e62hm3";
+var recurringRadioGroup = "_9e62hm1";
+var textEmphasis = "_9e62hmm";
+var wrapper = "_9e62hm0";
 export {
   discountLabel,
   downgradeCaption,

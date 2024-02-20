@@ -1,10 +1,10 @@
-// ../../packages/frontend/component/src/components/affine-banner/index.css.ts
-var browserWarningStyle = "_53fwmf0";
-var closeButtonStyle = "_53fwmf1";
-var closeIconStyle = "_53fwmf2";
-var tipsContainer = "_53fwmf3";
-var tipsMessage = "_53fwmf4";
-var tipsRightItem = "_53fwmf5";
+// ../component/src/components/affine-banner/index.css.ts
+var browserWarningStyle = "_1cc905z0";
+var closeButtonStyle = "_1cc905z1";
+var closeIconStyle = "_1cc905z2";
+var tipsContainer = "_1cc905z3";
+var tipsMessage = "_1cc905z4";
+var tipsRightItem = "_1cc905z5";
 export {
   browserWarningStyle,
   closeButtonStyle,

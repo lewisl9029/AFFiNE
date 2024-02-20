@@ -1,5 +1,5 @@
-// ../../packages/frontend/component/src/ui/tooltip/styles.css.ts
-var tooltipContent = "_1hcl3kd0";
+// ../component/src/ui/tooltip/styles.css.ts
+var tooltipContent = "cp0lso0";
 export {
   tooltipContent
 };

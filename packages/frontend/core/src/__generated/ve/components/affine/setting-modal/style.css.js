@@ -1,10 +1,10 @@
-// ../../packages/frontend/core/src/components/affine/setting-modal/style.css.ts
-var centerContainer = "_11ye02o1";
-var content = "_11ye02o2";
-var footer = "_11ye02o5";
-var suggestionLink = "_11ye02o3";
-var suggestionLinkIcon = "_11ye02o4";
-var wrapper = "_11ye02o0";
+// src/components/affine/setting-modal/style.css.ts
+var centerContainer = "gqzxc71";
+var content = "gqzxc72";
+var footer = "gqzxc75";
+var suggestionLink = "gqzxc73";
+var suggestionLinkIcon = "gqzxc74";
+var wrapper = "gqzxc70";
 export {
   centerContainer,
   content,

@@ -1,18 +1,18 @@
-// ../../packages/frontend/core/src/components/page-list/page-list-item.css.ts
-var actionsCellWrapper = "_1k6sga9c";
-var dateCell = "_1k6sga9b";
-var dndCell = "_1k6sga93";
-var dragOverlay = "_1k6sga91";
-var dragPageItemOverlay = "_1k6sga92";
-var iconCell = "_1k6sga99";
-var operationsCell = "_1k6sga9d";
-var root = "_1k6sga90";
-var selectionCell = "_1k6sga95";
-var tagsCell = "_1k6sga9a";
-var titleCell = "_1k6sga96";
-var titleCellMain = "_1k6sga97";
-var titleCellPreview = "_1k6sga98";
-var titleIconsWrapper = "_1k6sga94";
+// src/components/page-list/page-list-item.css.ts
+var actionsCellWrapper = "_1p40px8c";
+var dateCell = "_1p40px8b";
+var dndCell = "_1p40px83";
+var dragOverlay = "_1p40px81";
+var dragPageItemOverlay = "_1p40px82";
+var iconCell = "_1p40px89";
+var operationsCell = "_1p40px8d";
+var root = "_1p40px80";
+var selectionCell = "_1p40px85";
+var tagsCell = "_1p40px8a";
+var titleCell = "_1p40px86";
+var titleCellMain = "_1p40px87";
+var titleCellPreview = "_1p40px88";
+var titleIconsWrapper = "_1p40px84";
 export {
   actionsCellWrapper,
   dateCell,

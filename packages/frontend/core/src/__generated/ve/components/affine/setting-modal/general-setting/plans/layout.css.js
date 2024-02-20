@@ -1,9 +1,9 @@
-// ../../packages/frontend/core/src/components/affine/setting-modal/general-setting/plans/layout.css.ts
-var allPlansLink = "_14m23rg4";
-var plansLayoutRoot = "_14m23rg0";
-var scrollArea = "_14m23rg1";
-var scrollBar = "_14m23rg2";
-var scrollThumb = "_14m23rg3";
+// src/components/affine/setting-modal/general-setting/plans/layout.css.ts
+var allPlansLink = "_1sr5uer4";
+var plansLayoutRoot = "_1sr5uer0";
+var scrollArea = "_1sr5uer1";
+var scrollBar = "_1sr5uer2";
+var scrollThumb = "_1sr5uer3";
 export {
   allPlansLink,
   plansLayoutRoot,

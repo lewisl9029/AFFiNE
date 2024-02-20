@@ -1,5 +1,5 @@
-// ../../packages/frontend/core/src/components/page-list/view/collection-operations.css.ts
-var divider = "r2bzb80";
+// src/components/page-list/view/collection-operations.css.ts
+var divider = "_1k59emo0";
 export {
   divider
 };

@@ -1,12 +1,12 @@
-// ../../packages/frontend/core/src/pages/open-app.css.ts
-var affineLogo = "_4pvmuj1";
-var centerContent = "_4pvmuj6";
-var prompt = "_4pvmuj7";
-var root = "_4pvmuj0";
-var topNav = "_4pvmuj2";
-var topNavLink = "_4pvmuj4";
-var topNavLinks = "_4pvmuj3";
-var tryAgainLink = "_4pvmuj5";
+// src/pages/open-app.css.ts
+var affineLogo = "_1s343wo1";
+var centerContent = "_1s343wo6";
+var prompt = "_1s343wo7";
+var root = "_1s343wo0";
+var topNav = "_1s343wo2";
+var topNavLink = "_1s343wo4";
+var topNavLinks = "_1s343wo3";
+var tryAgainLink = "_1s343wo5";
 export {
   affineLogo,
   centerContent,
