@@ -207,6 +207,9 @@
       "npmPackages": {
         "@blocksuite/global": {
           "entryPoints": ["/utils"]
+        },
+        "@blocksuite/blocks": {
+          "entryPoints": ["/models"]
         }
       }
     },
@@ -238,9 +241,6 @@
       "npmPackages": {
         "@blocksuite/global": {
           "entryPoints": ["/utils"]
-        },
-        "@blocksuite/blocks": {
-          "entryPoints": ["/models"]
         }
       }
     },
