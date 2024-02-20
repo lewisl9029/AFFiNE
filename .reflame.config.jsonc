@@ -5,30 +5,25 @@
   // Reflame uses this to identify your app.
   // "appId": "01HEVPNHJS0NJ4R65K88W5DJ3E", // prod
   "appId": "01HEVRN0WSR4PSDYMSHXY1QC5M", // dev
-  // This is what shows up in the browser's tab bar.
-  "title": "Reflame App",
-  // This is the description that shows up in Google search.
-  "description": "A new Reflame app.2113461212123asds231233",
-  // Reflame will watch this directory for your React source code and deploy changes
-  // instantly.
-  //
-  // This normally defaults to 'app', but we set this to 'src' for Vite compatibility.
-  "sourceDirectory": "tests/storybook/src",
-  // Reflame will use this to keep your app up to date as we make improvements.
-  "foundation": {
-    "name": "vite-react",
-    "version": 2
-  },
-  "libraries": {
+  "defaultApp": "@affine/core",
+  "apps": {
     "@affine/core": {
+      "title": "AFFiNE",
+      // This is the description that shows up in Google search.
+      "description": "A new Reflame app.",
       "rootDirectory": "packages/frontend/core",
       "sourceDirectory": "packages/frontend/core/src",
       "nodejsCompatibility": {
-        "packageJson": true
+        "packageJson": {
+          "exportsDetection": {
+            "ignoreTopLevelDirectory": true
+          }
+        }
       },
       "storybookCompatibility": {
         "testStories": true
       },
+      "scripts": ["/index.tsx"],
       "npmPackages": {
         "@blocksuite/global": {
           "entryPoints": ["/utils"]
@@ -48,7 +43,11 @@
           ]
         },
         "foxact": {
-          "entryPoints": ["/use-debounced-state", "/noop"]
+          "entryPoints": [
+            "/use-error-boundary",
+            "/use-debounced-state",
+            "/noop"
+          ]
         },
         "jotai": {
           "entryPoints": ["/", "/index", "/vanilla", "/react", "/utils"]
@@ -60,12 +59,57 @@
           "entryPoints": ["/", "/react"]
         },
         "swr": {
-          "entryPoints": ["/immutable", "/"]
+          "entryPoints": ["/immutable", "/mutation", "/infinite", "/"]
         }
       },
       "filesIgnored": ["**/**.css.ts"],
       "specifierTransforms": {
-        "^/__generated/ve/(.*).css.js$": "/$1.css"
+        "^/__generated/ve/(.*).css.js$": "/$1.css",
+        "/shims/electron-api.js": "@affine/electron-api"
+      }
+    }
+  },
+  "libraries": {
+    "@affine/storybook": {
+      // This is what shows up in the browser's tab bar.
+      "title": "AFFiNE Storybook",
+      // This is the description that shows up in Google search.
+      "description": "A new Reflame app.2113461212123asds231233",
+      // Reflame will watch this directory for your React source code and deploy changes
+      // instantly.
+      //
+      // This normally defaults to 'app', but we set this to 'src' for Vite compatibility.
+      "sourceDirectory": "tests/storybook/src",
+      // Reflame will use this to keep your app up to date as we make improvements.
+      "foundation": {
+        "name": "vite-react",
+        "version": 2
+      },
+      // Enables nodejs compatibility mode for extensionless imports for JS/TS modules
+      "nodejsCompatibility": {
+        "packageJson": true
+      },
+      "storybookCompatibility": {
+        "testStories": true,
+        "stories": [
+          "**/*.stories.@(js|jsx|mjs|ts|tsx)",
+          "!stories/card.stories.tsx",
+          "!stories/core.stories.tsx",
+          "!stories/image-preview-modal.stories.tsx",
+          "!stories/page-list.stories.tsx",
+          "!stories/quick-search/quick-search-main.stories.tsx",
+          "!stories/quick-search/quick-search-modal.stories.tsx",
+          "!stories/share-menu.stories.tsx",
+          "!stories/workspace-list.stories.tsx"
+        ]
+      },
+      "npmPackages": {
+        "@blocksuite/global": {
+          "entryPoints": ["/utils", "/"]
+        },
+        "@blocksuite/blocks": {
+          "entryPoints": ["/models", "/"]
+        }
       }
     },
     "@affine/component": {
@@ -123,7 +167,8 @@
       },
       "filesIgnored": ["**/**.css.ts"],
       "specifierTransforms": {
-        "^/__generated/ve/(.*).css.js$": "/$1.css"
+        "^/__generated/ve/(.*).css.js$": "/$1.css",
+        "/shims/electron-api.js": "@affine/electron-api"
       }
     },
     "@affine/i18n": {
@@ -153,6 +198,25 @@
         "packageJson": true
       }
     },
+    "@affine/workspace": {
+      "rootDirectory": "packages/common/workspace",
+      "sourceDirectory": "packages/common/workspace/src",
+      "nodejsCompatibility": {
+        "packageJson": true
+      },
+      "npmPackages": {
+        "@blocksuite/global": {
+          "entryPoints": ["/utils"]
+        }
+      }
+    },
+    "@affine/workspace-impl": {
+      "rootDirectory": "packages/frontend/workspace-impl",
+      "sourceDirectory": "packages/frontend/workspace-impl/src",
+      "nodejsCompatibility": {
+        "packageJson": true
+      }
+    },
     "@affine/env": {
       "rootDirectory": "packages/common/env",
       "sourceDirectory": "packages/common/env/src",
@@ -174,6 +238,9 @@
       "npmPackages": {
         "@blocksuite/global": {
           "entryPoints": ["/utils"]
+        },
+        "@blocksuite/blocks": {
+          "entryPoints": ["/models"]
         }
       }
     },
@@ -238,88 +305,6 @@
       }
     }
   },
-  // Enables nodejs compatibility mode for extensionless imports for JS/TS modules
-  "nodejsCompatibility": {
-    "packageJson": true
-  },
-  "storybookCompatibility": {
-    "testStories": true,
-    "stories": [
-      "**/*.stories.@(js|jsx|mjs|ts|tsx)",
-      "!stories/card.stories.tsx",
-      "!stories/core.stories.tsx",
-      "!stories/image-preview-modal.stories.tsx",
-      "!stories/page-list.stories.tsx",
-      "!stories/quick-search/quick-search-main.stories.tsx",
-      "!stories/quick-search/quick-search-modal.stories.tsx",
-      "!stories/share-menu.stories.tsx",
-      "!stories/workspace-list.stories.tsx"
-    ]
-  },
-  // NPM packages listed here will be installed by Reflame every time you update this file.
-  //
-  // It's important to only include packages that will be used by your app in browsers here.
-  // Including dev-time dependencies that run in node can result in deploy failures and poor
-  // performance.
-  // "npmPackages": {
-  //   "util": "0.12.5",
-  //   "@mui/material": "^5.14.14",
-  //   // "@storybook/addon-actions": "^7.4.6",
-  //   // "@storybook/addon-essentials": "^7.4.6",
-  //   // "@storybook/addon-interactions": "^7.4.6",
-  //   // "@storybook/addon-links": "^7.4.6",
-  //   // "@storybook/addon-storysource": "^7.4.6",
-  //   "@storybook/blocks": "^7.4.6",
-  //   // "@storybook/builder-vite": "^7.4.6",
-  //   "@storybook/jest": "^0.2.3",
-  //   "@storybook/react": "^7.4.6",
-  //   // "@storybook/react-vite": "^7.4.6",
-  //   "@storybook/testing-library": "^0.2.2",
-  //   "@blocksuite/icons": "2.1.34",
-  //   "react-router-dom": "^6.16.0",
-  //   "jotai": {
-  //     "version": "^2.4.3",
-  //     "entryPoints": [
-  //       "/",
-  //       "/utils"
-  //     ]
-  //   },
-  //   "storybook-addon-react-router-v6": "^2.0.7",
-  //   "@dnd-kit/sortable": "^7.0.2",
-  //   "@toeverything/components": {
-  //     "version": "^0.0.46",
-  //     "entryPoints": [
-  //       "/button",
-  //       "/tooltip",
-  //       "/style.css"
-  //     ]
-  //   },
-  //   "@blocksuite/global": {
-  //     "version": "0.0.0-20231109020257-c0ea9c49-nightly",
-  //     "entryPoints": [
-  //       "/utils"
-  //     ]
-  //   },
-  //   "@blocksuite/blocks": {
-  //     "version": "0.0.0-20231109020257-c0ea9c49-nightly",
-  //     "entryPoints": [
-  //       "/models"
-  //     ]
-  //   },
-  //   "@blocksuite/store": {
-  //     "version": "0.0.0-20231109020257-c0ea9c49-nightly",
-  //     "entryPoints": [
-  //       "/",
-  //     ]
-  //   },
-  //   "foxact": {
-  //     "version": "^0.2.20",
-  //     "entryPoints": [
-  //       "/use"
-  //     ]
-  //   },
-  //   "ses": "^0.18.8",
-  // },
   "npmPackageOverrides": {
     // workaround for arborist (the library used by npm) not resolving * to prerelease
     "@blocksuite/global": "0.12.0-nightly-202401120404-4219e86",
@@ -327,13 +312,5 @@
     "@blocksuite/store": "0.12.0-nightly-202401120404-4219e86",
     "@blocksuite/block-std": "0.12.0-nightly-202401120404-4219e86",
     "@blocksuite/presets": "0.12.0-nightly-202401120404-4219e86"
-  },
-  "npmPackages": {
-    "@blocksuite/global": {
-      "entryPoints": ["/utils", "/"]
-    },
-    "@blocksuite/blocks": {
-      "entryPoints": ["/models", "/"]
-    }
   }
 }
