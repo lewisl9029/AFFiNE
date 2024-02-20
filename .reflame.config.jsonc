@@ -26,6 +26,9 @@
       "nodejsCompatibility": {
         "packageJson": true
       },
+      "storybookCompatibility": {
+        "testStories": true
+      },
       "npmPackages": {
         "@blocksuite/global": {
           "entryPoints": ["/utils"]
@@ -70,6 +73,9 @@
       "sourceDirectory": "packages/frontend/component/src",
       "nodejsCompatibility": {
         "packageJson": true
+      },
+      "storybookCompatibility": {
+        "testStories": true
       },
       "npmPackages": {
         "@mui/base": {
