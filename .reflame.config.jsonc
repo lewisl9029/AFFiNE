@@ -3,8 +3,8 @@
   // It's basically JSON, with the addition of comments, and looser syntax
   // (trailing commas!).
   // Reflame uses this to identify your app.
-  "appId": "01HEVPNHJS0NJ4R65K88W5DJ3E", // prod
-  // "appId": "01HEVRN0WSR4PSDYMSHXY1QC5M", // dev
+  // "appId": "01HEVPNHJS0NJ4R65K88W5DJ3E", // prod
+  "appId": "01HEVRN0WSR4PSDYMSHXY1QC5M", // dev
   // This is what shows up in the browser's tab bar.
   "title": "Reflame App",
   // This is the description that shows up in Google search.
@@ -20,6 +20,51 @@
     "version": 2
   },
   "libraries": {
+    "@affine/core": {
+      "rootDirectory": "packages/frontend/core",
+      "sourceDirectory": "packages/frontend/core/src",
+      "nodejsCompatibility": {
+        "packageJson": true
+      },
+      "npmPackages": {
+        "@blocksuite/global": {
+          "entryPoints": ["/utils"]
+        },
+        "@blocksuite/blocks": {
+          "entryPoints": ["/", "/content-parser"]
+        },
+        "@toeverything/components": {
+          "entryPoints": [
+            "/tooltip",
+            "/button",
+            "/menu",
+            "/modal",
+            "/avatar",
+            "/divider",
+            "/loading"
+          ]
+        },
+        "foxact": {
+          "entryPoints": ["/use-debounced-state", "/noop"]
+        },
+        "jotai": {
+          "entryPoints": ["/", "/index", "/vanilla", "/react", "/utils"]
+        },
+        "lodash": {
+          "entryPoints": ["/", "/groupBy"]
+        },
+        "next-auth": {
+          "entryPoints": ["/", "/react"]
+        },
+        "swr": {
+          "entryPoints": ["/immutable", "/"]
+        }
+      },
+      "filesIgnored": ["**/**.css.ts"],
+      "specifierTransforms": {
+        "^/__generated/ve/(.*).css.js$": "/$1.css"
+      }
+    },
     "@affine/component": {
       "rootDirectory": "packages/frontend/component",
       "sourceDirectory": "packages/frontend/component/src",
@@ -68,51 +113,6 @@
             "/avatar",
             "/divider"
           ]
-        }
-      },
-      "filesIgnored": ["**/**.css.ts"],
-      "specifierTransforms": {
-        "^/__generated/ve/(.*).css.js$": "/$1.css"
-      }
-    },
-    "@affine/core": {
-      "rootDirectory": "packages/frontend/core",
-      "sourceDirectory": "packages/frontend/core/src",
-      "nodejsCompatibility": {
-        "packageJson": true
-      },
-      "npmPackages": {
-        "@blocksuite/global": {
-          "entryPoints": ["/utils"]
-        },
-        "@blocksuite/blocks": {
-          "entryPoints": ["/", "/content-parser"]
-        },
-        "@toeverything/components": {
-          "entryPoints": [
-            "/tooltip",
-            "/button",
-            "/menu",
-            "/modal",
-            "/avatar",
-            "/divider",
-            "/loading"
-          ]
-        },
-        "foxact": {
-          "entryPoints": ["/use-debounced-state", "/noop"]
-        },
-        "jotai": {
-          "entryPoints": ["/", "/index", "/vanilla", "/react", "/utils"]
-        },
-        "lodash": {
-          "entryPoints": ["/", "/groupBy"]
-        },
-        "next-auth": {
-          "entryPoints": ["/", "/react"]
-        },
-        "swr": {
-          "entryPoints": ["/immutable", "/"]
         }
       },
       "filesIgnored": ["**/**.css.ts"],
