@@ -64,8 +64,7 @@
       },
       "filesIgnored": ["**/**.css.ts"],
       "specifierTransforms": {
-        "^/__generated/ve/(.*).css.js$": "/$1.css",
-        "/shims/electron-api.js": "@affine/electron-api"
+        "^/__generated/ve/(.*).css.js$": "/$1.css"
       }
     }
   },
@@ -167,8 +166,13 @@
       },
       "filesIgnored": ["**/**.css.ts"],
       "specifierTransforms": {
-        "^/__generated/ve/(.*).css.js$": "/$1.css",
-        "/shims/electron-api.js": "@affine/electron-api"
+        "^/__generated/ve/(.*).css.js$": "/$1.css"
+      }
+    },
+    "@affine/electron-api": {
+      "sourceDirectory": "packages/frontend/shims/electron-api",
+      "exports": {
+        ".": "./index.js"
       }
     },
     "@affine/i18n": {
