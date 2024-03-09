@@ -7,6 +7,48 @@
   "appId": "01HEVRN0WSR4PSDYMSHXY1QC5M", // dev
   "defaultApp": "@affine/core",
   "apps": {
+    "@affine/storybook": {
+      // This is what shows up in the browser's tab bar.
+      "title": "AFFiNE Storybook",
+      // This is the description that shows up in Google search.
+      "description": "A new Reflame app.2113461212123asds231233",
+      // Reflame will watch this directory for your React source code and deploy changes
+      // instantly.
+      //
+      // This normally defaults to 'app', but we set this to 'src' for Vite compatibility.
+      "sourceDirectory": "tests/storybook/src",
+      // Reflame will use this to keep your app up to date as we make improvements.
+      "foundation": {
+        "name": "vite-react",
+        "version": 2
+      },
+      // Enables nodejs compatibility mode for extensionless imports for JS/TS modules
+      "nodejsCompatibility": {
+        "packageJson": true
+      },
+      "storybookCompatibility": {
+        "testStories": true,
+        "stories": [
+          "**/*.stories.@(js|jsx|mjs|ts|tsx)",
+          "!stories/card.stories.tsx",
+          "!stories/core.stories.tsx",
+          "!stories/image-preview-modal.stories.tsx",
+          "!stories/page-list.stories.tsx",
+          "!stories/quick-search/quick-search-main.stories.tsx",
+          "!stories/quick-search/quick-search-modal.stories.tsx",
+          "!stories/share-menu.stories.tsx",
+          "!stories/workspace-list.stories.tsx"
+        ]
+      },
+      "npmPackages": {
+        "@blocksuite/global": {
+          "entryPoints": ["/utils", "/"]
+        },
+        "@blocksuite/blocks": {
+          "entryPoints": ["/models", "/"]
+        }
+      }
+    },
     "@affine/core": {
       "title": "AFFiNE",
       // This is the description that shows up in Google search.
@@ -70,48 +112,6 @@
     }
   },
   "libraries": {
-    "@affine/storybook": {
-      // This is what shows up in the browser's tab bar.
-      "title": "AFFiNE Storybook",
-      // This is the description that shows up in Google search.
-      "description": "A new Reflame app.2113461212123asds231233",
-      // Reflame will watch this directory for your React source code and deploy changes
-      // instantly.
-      //
-      // This normally defaults to 'app', but we set this to 'src' for Vite compatibility.
-      "sourceDirectory": "tests/storybook/src",
-      // Reflame will use this to keep your app up to date as we make improvements.
-      "foundation": {
-        "name": "vite-react",
-        "version": 2
-      },
-      // Enables nodejs compatibility mode for extensionless imports for JS/TS modules
-      "nodejsCompatibility": {
-        "packageJson": true
-      },
-      "storybookCompatibility": {
-        "testStories": true,
-        "stories": [
-          "**/*.stories.@(js|jsx|mjs|ts|tsx)",
-          "!stories/card.stories.tsx",
-          "!stories/core.stories.tsx",
-          "!stories/image-preview-modal.stories.tsx",
-          "!stories/page-list.stories.tsx",
-          "!stories/quick-search/quick-search-main.stories.tsx",
-          "!stories/quick-search/quick-search-modal.stories.tsx",
-          "!stories/share-menu.stories.tsx",
-          "!stories/workspace-list.stories.tsx"
-        ]
-      },
-      "npmPackages": {
-        "@blocksuite/global": {
-          "entryPoints": ["/utils", "/"]
-        },
-        "@blocksuite/blocks": {
-          "entryPoints": ["/models", "/"]
-        }
-      }
-    },
     "@affine/component": {
       "rootDirectory": "packages/frontend/component",
       "sourceDirectory": "packages/frontend/component/src",

@@ -18,7 +18,8 @@ import {
   type CommandCategory,
   PreconditionStrategy,
 } from '@toeverything/infra/command';
-import { commandScore } from 'cmdk';
+// FIXME: support npm package patches?
+// import { commandScore } from 'cmdk';
 import { atom, useAtomValue } from 'jotai';
 import { groupBy } from 'lodash-es';
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -46,6 +47,8 @@ export function removeDoubleQuotes(str?: string): string | undefined {
 
 export const cmdkQueryAtom = atom('');
 export const cmdkValueAtom = atom('');
+
+const commandScore = (_1: any, _2: any) => 0;
 
 // like currentWorkspaceAtom, but not throw error
 const safeCurrentPageAtom = atom<Promise<Page | undefined>>(async get => {
