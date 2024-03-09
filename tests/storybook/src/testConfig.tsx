@@ -1,7 +1,7 @@
 import './polyfills.js';
 import 'ses';
 import '@affine/component/theme/global.css';
-import './__generated/main.css';
+import './__generated/index.css';
 
 import { setupGlobal } from '@affine/env/global';
 import * as reactRouterDom from 'react-router-dom';
