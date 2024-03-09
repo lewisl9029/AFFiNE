@@ -1,4 +1,3 @@
-import './polyfills.js';
 import 'ses';
 import '@affine/component/theme/global.css';
 
